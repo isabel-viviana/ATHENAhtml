@@ -1,0 +1,49 @@
+{
+  "preguntas": [
+    {
+      "id": 1,
+      "area": "matematicas",
+      "dificultad": "basico",
+      "texto": "¿Cuál es el resultado de 2 + 2?",
+      "opciones": ["3", "4", "5", "6"],
+      "respuestaCorrecta": 1,
+      "explicacion": "La suma de 2 y 2 es igual a 4"
+    },
+    {
+      "id": 2,
+      "area": "lenguaje",
+      "dificultad": "basico",
+      "texto": "¿Cuál es el sinónimo de 'grande'?",
+      "opciones": ["pequeño", "enorme", "diminuto", "minúsculo"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Enorme es un sinónimo de grande"
+    },
+    {
+      "id": 3,
+      "area": "ciencias",
+      "dificultad": "intermedio",
+      "texto": "¿Cuál es el elemento químico con símbolo O?",
+      "opciones": ["Oro", "Osmio", "Oxígeno", "Onquio"],
+      "respuestaCorrecta": 2,
+      "explicacion": "El oxígeno tiene el símbolo químico O"
+    },
+    {
+      "id": 4,
+      "area": "historia",
+      "dificultad": "intermedio",
+      "texto": "¿En qué año cayó el Muro de Berlín?",
+      "opciones": ["1987", "1989", "1991", "1993"],
+      "respuestaCorrecta": 1,
+      "explicacion": "El Muro de Berlín cayó el 9 de noviembre de 1989"
+    },
+    {
+      "id": 5,
+      "area": "matematicas",
+      "dificultad": "avanzado",
+      "texto": "¿Cuál es la derivada de x²?",
+      "opciones": ["x", "2x", "x²/2", "2x²"],
+      "respuestaCorrecta": 1,
+      "explicacion": "La derivada de x² es 2x según la regla de potencia"
+    }
+  ]
+}

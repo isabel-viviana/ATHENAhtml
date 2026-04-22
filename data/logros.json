@@ -1,0 +1,69 @@
+{
+  "logros": [
+    {
+      "id": 1,
+      "nombre": "Primer Paso",
+      "descripcion": "Completa tu primer test",
+      "icono": "🎯",
+      "requisitos": {
+        "testCompletados": 1
+      },
+      "recompensa": {
+        "monedas": 50,
+        "experiencia": 100
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Estudiante Dedicado",
+      "descripcion": "Completa 10 tests",
+      "icono": "📚",
+      "requisitos": {
+        "testCompletados": 10
+      },
+      "recompensa": {
+        "monedas": 150,
+        "experiencia": 300
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Perfeccionista",
+      "descripcion": "Obtén una calificación perfecta en un test",
+      "icono": "⭐",
+      "requisitos": {
+        "calificacionPerfecta": true
+      },
+      "recompensa": {
+        "monedas": 300,
+        "experiencia": 500
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Racha de Fuego",
+      "descripcion": "Mantén una racha de 7 días consecutivos",
+      "icono": "🔥",
+      "requisitos": {
+        "streakDias": 7
+      },
+      "recompensa": {
+        "monedas": 200,
+        "experiencia": 400
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Maestro",
+      "descripcion": "Obtén 3 certificados",
+      "icono": "🏆",
+      "requisitos": {
+        "certificados": 3
+      },
+      "recompensa": {
+        "monedas": 500,
+        "experiencia": 1000
+      }
+    }
+  ]
+}

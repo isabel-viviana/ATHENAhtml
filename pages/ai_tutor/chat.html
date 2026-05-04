@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat - diseñoATHENA</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/pages/tutor.css">
+<meta charset="UTF-8">
+<title>Chat IA</title>
+<link rel="stylesheet" href="../../styles/ai_tutor.css">
 </head>
 <body>
-    <div class="chat-container">
-        <h1>Chat con Tutor</h1>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>ATHENA</h2>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Simulacros</a>
+        <a href="#">Ranking</a>
+        <a href="#">Prácticas</a>
+        <a class="active" href="#">Tutor IA</a>
+        <a href="#">Perfil</a>
+    </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main chat-container">
+
+    <!-- HEADER -->
+    <div class="chat-header">
+        <h1>Tutor IA</h1>
+        <span class="status">● Activo</span>
     </div>
-    <script src="../../js/global.js"></script>
+
+    <!-- MESSAGES -->
+    <div class="chat-messages">
+
+        <div class="message ai">
+            <p>Hola, ¿en qué te puedo ayudar?</p>
+        </div>
+
+        <div class="message user">
+            <p>Explícame esta pregunta</p>
+        </div>
+
+        <div class="message ai">
+            <p>Claro, vamos paso a paso...</p>
+        </div>
+
+    </div>
+
+    <!-- INPUT -->
+    <form class="chat-input">
+        <input type="text" placeholder="Escribe tu mensaje...">
+        <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+
+</main>
+
+</div>
 </body>
 </html>

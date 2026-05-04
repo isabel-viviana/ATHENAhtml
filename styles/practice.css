@@ -1,0 +1,174 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUENTES */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #121D2E, #1B2A41);
+    color: #FFFFFF;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(180deg, #121D2E, #1B2A41);
+    padding: 20px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #B0B8C1;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #FFFFFF;
+}
+
+.sidebar .active {
+    background: rgba(52,152,219,0.2);
+    color: #FFFFFF;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* TITULOS */
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(36,52,71,0.6);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* CARD ESTADOS */
+.correct {
+    border: 1px solid #2ECC71;
+}
+
+.error {
+    border: 1px solid #E74C3C;
+}
+
+/* BOTONES */
+button {
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* CTA PRINCIPAL */
+.btn-primary {
+    background: linear-gradient(135deg, #F1C40F, #D4AC0D);
+    color: #1B2A41;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(241,196,15,0.4);
+}
+
+/* BOTON SECUNDARIO */
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #3498DB;
+    color: #3498DB;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(52,152,219,0.1);
+}
+
+/* OPCIONES (RESPUESTAS / CONFIG) */
+.option {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: rgba(52,152,219,0.2);
+}
+
+/* PROGRESO SIMPLE */
+.progress {
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #3498DB;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHENA | Estadísticas y Progreso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/pages/statistics/statistics.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <i class="fas fa-brain"></i>
+        <span class="sidebar__brand">ATHENA</span>
+      </div>
+
+      <nav class="sidebar__nav">
+        <a href="#" class="sidebar__link">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="#" class="sidebar__link">
+          <i class="fas fa-clipboard-check"></i>
+          <span>Simulacros</span>
+        </a>
+        <a href="#" class="sidebar__link">
+          <i class="fas fa-dumbbell"></i>
+          <span>Prácticas</span>
+        </a>
+        <a href="#" class="sidebar__link">
+          <i class="fas fa-robot"></i>
+          <span>Tutor IA</span>
+        </a>
+        <a href="#" class="sidebar__link sidebar__link--active">
+          <i class="fas fa-chart-pie"></i>
+          <span>Estadísticas</span>
+        </a>
+        <a href="#" class="sidebar__link">
+          <i class="fas fa-user-circle"></i>
+          <span>Perfil</span>
+        </a>
+        <a href="#" class="sidebar__link sidebar__link--notifications">
+          <i class="fas fa-bell"></i>
+          <span>Notificaciones</span>
+          <span class="sidebar__badge">3</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+      <!-- CONTENIDO -->
+      <div class="main__content">
+
+        <!-- HEADER -->
+        <section class="page-header">
+          <div class="page-header__info">
+            <h1>Estadísticas y Progreso</h1>
+            <p>Analiza tu rendimiento y sigue mejorando cada día.</p>
+          </div>
+          <a href="/Scren-AnalisisMateria-Estadisticas/index.html" class="page-header__btn">
+            <i class="fas fa-chart-bar"></i>
+            Ver Análisis Profundo
+          </a>
+        </section>
+
+        <!-- TOP CARDS -->
+        <section class="cards-row">
+
+          <!-- Puntaje Estimado -->
+          <div class="stat-card stat-card--large">
+            <h4 class="stat-card__label">PUNTAJE ESTIMADO ACTUAL</h4>
+            <div class="stat-card__score">340</div>
+            <div class="stat-card__tags">
+              <span class="badge badge--purple">Nivel Alto</span>
+              <span class="badge badge--dark">Percentil 78%</span>
+            </div>
+            <p class="stat-card__positive">+25 puntos este mes</p>
+            <p class="stat-card__note">Excelente trabajo, vas por buen camino.</p>
+          </div>
+
+          <!-- Simulacros -->
+          <div class="stat-card">
+            <h4 class="stat-card__label">SIMULACROS COMPLETADOS</h4>
+            <div class="stat-card__score stat-card__score--medium">12</div>
+            <p class="stat-card__note">Último hace 2 días</p>
+            <p class="stat-card__positive">+3 simulacros este mes</p>
+          </div>
+
+          <!-- Área más fuerte -->
+          <div class="stat-card">
+            <h4 class="stat-card__label">ÁREA MÁS FUERTE</h4>
+            <h3 class="stat-card__area">Lectura Crítica</h3>
+            <p class="stat-card__note">Percentil 85%</p>
+            <p class="stat-card__positive">¡Sigue así!</p>
+          </div>
+
+        </section>
+
+        <!-- GRÁFICOS -->
+        <section class="charts-row">
+
+          <!-- Evolución -->
+          <div class="chart-card">
+            <h3 class="chart-card__title">Evolución del Puntaje Global</h3>
+            <div class="chart-card__placeholder">
+              <svg viewBox="0 0 400 150" class="chart-card__svg">
+                <polyline points="0,120 80,100 160,110 240,70 320,50 400,30" 
+                          fill="none" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+                <polyline points="0,120 80,100 160,110 240,70 320,50 400,30" 
+                          fill="url(#gradient)" stroke="none" opacity="0.15"/>
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#6366F1"/>
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="chart-card__footer">
+              <span class="chart-card__stat">+65 puntos</span>
+              <span class="chart-card__meta">Meta mensual 340 / 400</span>
+            </div>
+          </div>
+
+          <!-- Desempeño por Áreas -->
+          <div class="chart-card">
+            <h3 class="chart-card__title">Desempeño por Áreas (%)</h3>
+            <div class="chart-card__bars">
+              <div class="bar-item">
+                <span class="bar-item__label">Lectura</span>
+                <div class="bar-item__track">
+                  <div class="bar-item__fill bar-item__fill--purple" style="width: 85%;">85%</div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <span class="bar-item__label">Matemáticas</span>
+                <div class="bar-item__track">
+                  <div class="bar-item__fill bar-item__fill--blue" style="width: 75%;">75%</div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <span class="bar-item__label">Ciencias</span>
+                <div class="bar-item__track">
+                  <div class="bar-item__fill bar-item__fill--yellow" style="width: 60%;">60%</div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <span class="bar-item__label">Sociales</span>
+                <div class="bar-item__track">
+                  <div class="bar-item__fill bar-item__fill--green" style="width: 70%;">70%</div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <span class="bar-item__label">Inglés</span>
+                <div class="bar-item__track">
+                  <div class="bar-item__fill bar-item__fill--red" style="width: 30%;">30%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- BOTTOM -->
+        <section class="bottom-row">
+
+          <!-- Recomendación -->
+          <div class="recommend-card">
+            <h3 class="recommend-card__title">Recomendación ATHENA</h3>
+            <p class="recommend-card__text">Inglés es tu área con mayor oportunidad de mejora.</p>
+            <a href="#" class="recommend-card__btn">
+              <i class="fas fa-dumbbell"></i>
+              Practicar Inglés
+            </a>
+          </div>
+
+          <!-- Mini stats -->
+          <div class="mini-stats">
+            <div class="mini-card">
+              <p class="mini-card__label">Racha actual</p>
+              <h2 class="mini-card__value">12 días</h2>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card__label">Mejora semanal</p>
+              <h2 class="mini-card__value">+15 pts</h2>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card__label">Puntaje más alto</p>
+              <h2 class="mini-card__value">340</h2>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

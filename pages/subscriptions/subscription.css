@@ -1,0 +1,520 @@
+/* ==========================================
+RESET
+========================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+VARIABLES
+========================================== */
+
+:root{
+
+    --bg-body:#0B1120;
+    --bg-card:#131E36;
+    --bg-soft:#18273E;
+
+    --primary:#6366F1;
+    --primary-light:rgba(99,102,241,0.15);
+
+    --text:#F1F5F9;
+    --text-secondary:#94A3B8;
+    --text-muted:#64748B;
+
+    --border:#1E293B;
+
+    --success:#22C55E;
+    --warning:#FACC15;
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:18px;
+    --radius-full:999px;
+}
+
+/* ==========================================
+BASE
+========================================== */
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg-body);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================================
+SIDEBAR
+========================================== */
+
+.sidebar{
+    width:250px;
+    background:var(--bg-body);
+    padding:28px 20px;
+    border-right:1px solid var(--border);
+
+    display:flex;
+    flex-direction:column;
+    flex-shrink:0;
+}
+
+.sidebar__logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:40px;
+    padding-left:8px;
+}
+
+.sidebar__logo i{
+    font-size:26px;
+    color:var(--primary);
+}
+
+.sidebar__brand{
+    font-size:22px;
+    font-weight:700;
+}
+
+.sidebar__nav{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+.sidebar__link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    color:var(--text-secondary);
+    text-decoration:none;
+
+    transition:0.2s ease;
+}
+
+.sidebar__link i{
+    width:20px;
+    text-align:center;
+}
+
+.sidebar__link:hover{
+    background:var(--primary-light);
+    color:var(--primary);
+}
+
+.sidebar__link--active{
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+}
+
+.sidebar__link--notifications{
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+    border-radius:0;
+}
+
+.sidebar__badge{
+    margin-left:auto;
+
+    background:#EF4444;
+    color:#fff;
+
+    font-size:11px;
+    font-weight:700;
+
+    padding:2px 7px;
+
+    border-radius:999px;
+}
+
+/* ==========================================
+MAIN
+========================================== */
+
+.main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.main__content{
+    width:100%;
+    max-width:1100px;
+
+    padding:26px 34px 40px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.page-header{
+    width:100%;
+    max-width:900px;
+
+    margin:0 auto 24px auto;
+}
+
+.page-header__info h1{
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:6px;
+    letter-spacing:-1px;
+}
+
+.page-header__info p{
+    color:var(--text-muted);
+    font-size:15px;
+}
+
+/* ==========================================
+SUBSCRIPTION CARD
+========================================== */
+
+.subscription-card{
+    width:100%;
+    max-width:900px;
+
+    margin:0 auto 22px auto;
+
+    background:linear-gradient(
+        180deg,
+        rgba(19,30,54,1) 0%,
+        rgba(17,26,46,1) 100%
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+.subscription-card__top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+    padding-bottom:24px;
+    border-bottom:1px solid var(--border);
+}
+
+.subscription-card__badges{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:16px;
+}
+
+.plan-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:#FACC15;
+    color:#111827;
+
+    font-size:12px;
+    font-weight:800;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+}
+
+.status-badge{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    color:var(--success);
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.status-badge i{
+    font-size:8px;
+}
+
+.subscription-card__plan h2{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.subscription-card__plan p{
+    color:var(--text-secondary);
+    font-size:14px;
+}
+
+.subscription-card__plan p span{
+    color:var(--text);
+    font-weight:600;
+}
+
+.subscription-card__actions{
+    display:flex;
+    gap:12px;
+}
+
+.btn{
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    padding:13px 22px;
+
+    border-radius:12px;
+
+    font-weight:600;
+    font-size:14px;
+
+    transition:0.2s ease;
+}
+
+.btn--primary{
+    background:rgba(59,130,246,0.12);
+    border:1px solid #3B82F6;
+    color:#60A5FA;
+}
+
+.btn--primary:hover{
+    background:rgba(59,130,246,0.2);
+}
+
+.btn--secondary{
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--text-secondary);
+}
+
+.btn--secondary:hover{
+    background:rgba(255,255,255,0.03);
+}
+
+.subscription-card__bottom{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+
+    margin-top:22px;
+}
+
+.subscription-stat{
+    background:rgba(255,255,255,0.02);
+
+    border:1px solid rgba(255,255,255,0.04);
+
+    border-radius:16px;
+
+    padding:18px;
+}
+
+.subscription-stat__label{
+    display:block;
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+    margin-bottom:10px;
+}
+
+.subscription-stat h3{
+    font-size:18px;
+    font-weight:700;
+}
+
+/* ==========================================
+HISTORY CARD
+========================================== */
+
+.history-card{
+    width:100%;
+    max-width:900px;
+
+    margin:0 auto;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:26px;
+}
+
+.history-card__header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:22px;
+}
+
+.history-card__header h2{
+    font-size:22px;
+}
+
+.history-card__header span{
+    color:var(--text-muted);
+    font-size:13px;
+}
+
+.payment-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,0.04);
+}
+
+.payment-item:first-of-type{
+    border-top:none;
+    padding-top:0;
+}
+
+.payment-item__left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.payment-icon{
+    width:48px;
+    height:48px;
+
+    border-radius:14px;
+
+    background:rgba(99,102,241,0.12);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#818CF8;
+}
+
+.payment-info h3{
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.payment-info p{
+    color:var(--text-muted);
+    font-size:13px;
+}
+
+.payment-item__right{
+    text-align:right;
+}
+
+.payment-item__right h4{
+    color:#FACC15;
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.payment-status{
+    color:#60A5FA;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .subscription-card__top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .subscription-card__actions{
+        width:100%;
+    }
+
+    .btn{
+        flex:1;
+    }
+
+    .subscription-card__bottom{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main__content{
+        padding:20px 16px 30px;
+    }
+
+    .payment-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .payment-item__right{
+        text-align:left;
+    }
+}
+
+@media(max-width:480px){
+
+    .subscription-card{
+        padding:20px;
+    }
+
+    .history-card{
+        padding:20px;
+    }
+
+    .subscription-card__actions{
+        flex-direction:column;
+    }
+
+    .page-header__info h1{
+        font-size:28px;
+    }
+}

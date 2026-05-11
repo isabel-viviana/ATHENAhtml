@@ -1,68 +1,427 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Perfil</title>
-<link rel="stylesheet" href="/dise-o-ATHENA/styles/profile.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>ATHENA | Perfil</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="/pages/profiles/profile.css">
+</head>
 <body>
 
 <div class="layout">
 
-<aside class="sidebar">
-    <h2>ATHENA</h2>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Simulacros</a>
-        <a href="#">Prácticas</a>
-        <a href="#">Tutor IA</a>
-        <a href="#">Estadísticas</a>
-        <a class="active" href="#">Perfil</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar__logo">
+      <i class="fas fa-brain"></i>
+      <span class="sidebar__brand">ATHENA</span>
+    </div>
+
+    <nav class="sidebar__nav">
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-clipboard-check"></i>
+        <span>Simulacros</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-dumbbell"></i>
+        <span>Prácticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-robot"></i>
+        <span>Tutor IA</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-chart-pie"></i>
+        <span>Estadísticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--active">
+        <i class="fas fa-user-circle"></i>
+        <span>Perfil</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--notifications">
+        <i class="fas fa-bell"></i>
+        <span>Notificaciones</span>
+        <span class="sidebar__badge">3</span>
+      </a>
+
     </nav>
-</aside>
 
-<main class="main">
+  </aside>
 
-<div class="header">
-    <h1>Perfil</h1>
-    <p class="text-muted">Gestiona tu cuenta</p>
-</div>
+  <!-- MAIN -->
+  <main class="main">
 
-<div class="card">
-    <h2>Andrés Estudiante</h2>
-    <p class="text-muted">Nivel 15 • 3250 XP</p>
-    <a href="profile_edit.html" class="btn-primary">Editar perfil</a>
-</div>
+    <!-- DECORATIVE BLUR -->
+    <div class="bg-blur bg-blur--one"></div>
+    <div class="bg-blur bg-blur--two"></div>
 
-<div class="grid grid-2">
+    <!-- PROFILE HEADER -->
+    <section class="profile-header-card">
 
-<a href="achievements.html" class="card">
-    <h3>Logros</h3>
-    <p class="text-muted">15 desbloqueados</p>
-</a>
+      <div class="profile-user">
 
-<a href="history.html" class="card">
-    <h3>Historial</h3>
-    <p class="text-muted">24 pruebas</p>
-</a>
+        <div class="avatar-container">
 
-<a href="store.html" class="card">
-    <h3>Tienda</h3>
-    <p class="text-muted">Usa tus monedas</p>
-</a>
+          <div class="avatar-circle">
+            A
+          </div>
 
-<a href="subscription.html" class="card">
-    <h3>Suscripción</h3>
-    <p class="text-muted">Premium activo</p>
-</a>
+          <span class="level-badge">
+            LVL 15
+          </span>
 
-</div>
+        </div>
 
-<a href="profile_settings.html" class="btn-secondary">Configuración</a>
-<button class="btn-danger">Cerrar sesión</button>
+        <div class="profile-user__info">
 
-</main>
+          <div class="name-row">
+            <h1>Andrés Estudiante</h1>
+
+            <button class="edit-btn">
+              <i class=" fas fa-pen"></i>
+            </button>
+          </div>
+
+          <p class="school-info">
+            Colegio San Juan Bosco • Grado 11
+          </p>
+
+          <!-- XP -->
+          <div class="xp-container">
+
+            <div class="xp-label">
+              <span>
+                Nivel <strong>15</strong>
+              </span>
+
+              <span>
+                <strong>65%</strong> para el siguiente nivel
+              </span>
+            </div>
+
+            <div class="xp-bar-bg">
+              <div class="xp-bar-fill"></div>
+            </div>
+
+            <p class="xp-count">
+              3,250 / 5,000 XP
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- QUICK STATS -->
+      <div class="quick-stats">
+
+        <div class="quick-card">
+
+          <div class="quick-card__icon quick-card__icon--gold">
+            <i class="fas fa-coins"></i>
+          </div>
+
+          <div class="quick-card__content">
+            <span class="quick-card__value">1,250</span>
+            <span class="quick-card__label">Monedas</span>
+          </div>
+
+          <a href="#" class="quick-card__link">
+            Ver tienda
+          </a>
+
+        </div>
+
+        <div class="quick-card">
+
+          <div class="quick-card__icon quick-card__icon--red">
+            <i class="fas fa-fire"></i>
+          </div>
+
+          <div class="quick-card__content">
+            <span class="quick-card__value">12</span>
+            <span class="quick-card__label">Racha</span>
+          </div>
+
+          <span class="quick-card__sub">
+            días seguidos
+          </span>
+
+        </div>
+
+        <div class="quick-card quick-card--premium">
+
+          <div class="quick-card__icon quick-card__icon--purple">
+            <i class="fas fa-crown"></i>
+          </div>
+
+          <div class="quick-card__content">
+            <span class="quick-card__label">Plan</span>
+            <span class="quick-card__value">
+              Premium
+            </span>
+          </div>
+
+          <span class="status-active">
+            Activo
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION TITLE -->
+    <div class="section-heading">
+
+      <h2>Cuenta</h2>
+
+      <p>
+        Gestiona tu progreso, recompensas y configuraciones.
+      </p>
+
+    </div>
+
+    <!-- ACCOUNT GRID -->
+    <section class="account-grid">
+
+      <!-- CARD -->
+      <article class="action-card">
+
+        <div class="action-card__icon blue-bg">
+          <i class="fas fa-award"></i>
+        </div>
+
+        <div class="action-card__content">
+
+          <h3>Mis Logros</h3>
+
+          <p>
+            Descubre tus logros y recompensas desbloqueadas.
+          </p>
+
+          <span class="action-card__badge blue">
+            15 desbloqueados
+          </span>
+
+        </div>
+
+        <i class="fas fa-chevron-right action-card__arrow"></i>
+
+      </article>
+
+      <!-- CARD -->
+      <article class="action-card">
+
+        <div class="action-card__icon purple-bg">
+          <i class="fas fa-history"></i>
+        </div>
+
+        <div class="action-card__content">
+
+          <h3>Historial de Pruebas</h3>
+
+          <p>
+            Revisa simulacros y prácticas realizadas.
+          </p>
+
+          <span class="action-card__badge purple">
+            24 pruebas realizadas
+          </span>
+
+        </div>
+
+        <i class="fas fa-chevron-right action-card__arrow"></i>
+
+      </article>
+
+      <!-- CARD -->
+      <article class="action-card">
+
+        <div class="action-card__icon pink-bg">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+
+        <div class="action-card__content">
+
+          <h3>Tienda y Recompensas</h3>
+
+          <p>
+            Gasta tus monedas en artículos exclusivos.
+          </p>
+
+          <span class="action-card__badge pink">
+            Nuevos artículos
+          </span>
+
+        </div>
+
+        <i class="fas fa-chevron-right action-card__arrow"></i>
+
+      </article>
+
+      <!-- CARD -->
+      <article class="action-card">
+
+        <div class="action-card__icon green-bg">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+
+        <div class="action-card__content">
+
+          <h3>Suscripción</h3>
+
+          <p>
+            Gestiona tu plan y métodos de pago.
+          </p>
+
+          <span class="action-card__badge green">
+            Premium activo
+          </span>
+
+        </div>
+
+        <i class="fas fa-chevron-right action-card__arrow"></i>
+
+      </article>
+
+    </section>
+
+    <!-- BOTTOM GRID -->
+    <section class="bottom-grid">
+
+      <!-- ACTIVITY -->
+      <div class="summary-card">
+
+        <div class="summary-card__header summary-card__header--blue">
+          <i class="fas fa-chart-line"></i>
+          Actividad reciente
+        </div>
+
+        <div class="activity-content">
+
+          <div class="activity-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+
+          <div class="activity-info">
+
+            <h3>
+              ¡Vas muy bien, Andrés! 💪
+            </h3>
+
+            <p>
+              Tu rendimiento ha mejorado
+              <strong>12%</strong> esta semana.
+            </p>
+
+            <button class="btn-outline">
+              Ver estadísticas
+              <i class="fas fa-arrow-right"></i>
+            </button>
+
+          </div>
+
+          <div class="rocket-decor">
+            🚀
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ACHIEVEMENT -->
+      <div class="summary-card">
+
+        <div class="summary-card__header">
+          Último logro
+        </div>
+
+        <div class="achievement-content">
+
+          <div class="trophy-hex">
+            <i class="fas fa-trophy"></i>
+          </div>
+
+          <div class="achievement-info">
+
+            <h3>Constante</h3>
+
+            <p>
+              Completa 7 días seguidos de práctica.
+            </p>
+
+            <span class="reward">
+              <i class="fas fa-coins"></i>
+              +50 monedas
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="profile-footer">
+
+      <button class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i>
+        Cerrar sesión
+      </button>
+
+      <div class="footer-help">
+        ¿Necesitas ayuda?
+        <a href="#">
+          Centro de ayuda
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </footer>
+
+    <!-- FLOATING BOT -->
+    <div class="assistant-help">
+
+      <div class="assistant-help__message">
+        ¡Sigue así! Estás progresando muy bien.
+      </div>
+
+      <div class="assistant-help__avatar">
+        🤖
+      </div>
+
+    </div>
+
+  </main>
+
 </div>
 
 </body>

@@ -1,50 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mock Exam</title>
-<link rel="stylesheet" href="../../styles/mock_exams.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATHENA | Simulacro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="/pages/mock_exams/mock_exam.css">
 </head>
+
 <body>
 
 <div class="layout">
 
-<aside class="sidebar">
-    <h2>ATHENA</h2>
-    
-    <a href="#">Inicio</a>
-        <a class="active" href="#">Simulacros</a>
-        <a href="#">Ranking</a>
-        <a href="#">Prácticas</a>
-        <a href="#">Tutor IA</a>
-        <a href="#">Perfil</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar__logo">
+      <i class="fas fa-brain"></i>
+      <span class="sidebar__brand">ATHENA</span>
+    </div>
+
+    <nav class="sidebar__nav">
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--active">
+        <i class="fas fa-clipboard-check"></i>
+        <span>Simulacros</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-dumbbell"></i>
+        <span>Prácticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-robot"></i>
+        <span>Tutor IA</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-chart-pie"></i>
+        <span>Estadísticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-user-circle"></i>
+        <span>Perfil</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--notifications">
+        <i class="fas fa-bell"></i>
+        <span>Notificaciones</span>
+        <span class="sidebar__badge">3</span>
+      </a>
+
     </nav>
-</aside>
 
-<main class="main">
+  </aside>
 
-<h1>Pregunta 1 de 10</h1>
+  <!-- MAIN -->
+  <main class="main">
 
-<div class="card">
-    <p>¿Qué número continúa la serie?</p>
-    <p>2, 4, 6, 8, ?</p>
-</div>
+    <div class="main__content">
 
-<div class="card">
+      <!-- TOP -->
+      <section class="quiz-top">
 
-    <button class="option">10</button>
-    <button class="option">12</button>
-    <button class="option">14</button>
-    <button class="option">16</button>
+        <div class="quiz-top__left">
+          <span class="quiz-top__subject">MATEMÁTICAS</span>
+          <h2>Pregunta 1 de 25</h2>
+        </div>
 
-</div>
+        <div class="quiz-top__timer">
+          <i class="fa-regular fa-clock"></i>
+          <span>01:45:22</span>
+        </div>
 
-<div class="actions">
-    <button class="btn-secondary">Omitir</button>
-    <button class="btn-primary">Responder</button>
-</div>
+      </section>
 
-</main>
+      <!-- PROGRESS -->
+      <div class="progress">
+        <div class="progress__fill"></div>
+      </div>
+
+      <!-- QUESTION -->
+      <section class="question">
+
+        <h1 class="question__title">
+          Un agricultor tiene un terreno rectangular cuya longitud es
+          3 veces su ancho. Si el área del terreno es de 147 metros
+          cuadrados, ¿cuál es el perímetro del terreno?
+        </h1>
+
+        <!-- OPTIONS -->
+        <div class="options">
+
+          <button class="option">
+            <span class="option__letter">A</span>
+            <span>56 metros</span>
+          </button>
+
+          <button class="option">
+            <span class="option__letter">B</span>
+            <span>42 metros</span>
+          </button>
+
+          <button class="option">
+            <span class="option__letter">C</span>
+            <span>28 metros</span>
+          </button>
+
+          <button class="option">
+            <span class="option__letter">D</span>
+            <span>64 metros</span>
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- FOOTER -->
+      <section class="quiz-footer">
+
+        <button class="footer-btn footer-btn--ghost">
+          <i class="fas fa-chevron-left"></i>
+          Anterior
+        </button>
+
+        <button class="footer-btn footer-btn--primary">
+          Siguiente
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </section>
+
+    </div>
+
+    <!-- ASSISTANT -->
+    <div class="assistant">
+
+      <div class="assistant__message">
+        ¡Concéntrate! Tú puedes con este simulacro.
+      </div>
+
+      <div class="assistant__bot">
+        🤖
+      </div>
+
+    </div>
+
+  </main>
+
 </div>
 
 </body>

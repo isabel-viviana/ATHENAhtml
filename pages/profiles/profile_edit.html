@@ -1,68 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Perfil</title>
-<link rel="stylesheet" href="/dise-o-ATHENA/styles/profile.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>ATHENA | Editar Perfil</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="/pages/profiles/profile_edit.css">
+</head>
 <body>
 
 <div class="layout">
 
-<aside class="sidebar">
-    <h2>ATHENA</h2>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Simulacros</a>
-        <a href="#">Prácticas</a>
-        <a href="#">Tutor IA</a>
-        <a href="#">Estadísticas</a>
-        <a class="active" href="#">Perfil</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar__logo">
+      <i class="fas fa-brain"></i>
+      <span class="sidebar__brand">ATHENA</span>
+    </div>
+
+    <nav class="sidebar__nav">
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-clipboard-check"></i>
+        <span>Simulacros</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-dumbbell"></i>
+        <span>Prácticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-robot"></i>
+        <span>Tutor IA</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-chart-pie"></i>
+        <span>Estadísticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--active">
+        <i class="fas fa-user-circle"></i>
+        <span>Perfil</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--notifications">
+        <i class="fas fa-bell"></i>
+        <span>Notificaciones</span>
+        <span class="sidebar__badge">3</span>
+      </a>
+
     </nav>
-</aside>
 
-<main class="main">
+  </aside>
 
-<div class="header">
-    <h1>Perfil</h1>
-    <p class="text-muted">Gestiona tu cuenta</p>
-</div>
+  <!-- MAIN -->
+  <main class="main">
 
-<div class="card">
-    <h2>Andrés Estudiante</h2>
-    <p class="text-muted">Nivel 15 • 3250 XP</p>
-    <a href="profile_edit.html" class="btn-primary">Editar perfil</a>
-</div>
+    <!-- decorative blur -->
+    <div class="bg-blur bg-blur--one"></div>
+    <div class="bg-blur bg-blur--two"></div>
 
-<div class="grid grid-2">
+    <!-- PROFILE CARD -->
+    <section class="profile-wrapper">
 
-<a href="achievements.html" class="card">
-    <h3>Logros</h3>
-    <p class="text-muted">15 desbloqueados</p>
-</a>
+      <div class="profile-card">
 
-<a href="history.html" class="card">
-    <h3>Historial</h3>
-    <p class="text-muted">24 pruebas</p>
-</a>
+        <div class="profile-card__header">
 
-<a href="store.html" class="card">
-    <h3>Tienda</h3>
-    <p class="text-muted">Usa tus monedas</p>
-</a>
+          <div>
+            <h1>Editar Perfil</h1>
+            <p>
+              Actualiza tu información personal y académica.
+            </p>
+          </div>
 
-<a href="subscription.html" class="card">
-    <h3>Suscripción</h3>
-    <p class="text-muted">Premium activo</p>
-</a>
+          <div class="profile-level">
+            <span class="profile-level__badge">
+              Nivel Alto
+            </span>
+          </div>
 
-</div>
+        </div>
 
-<a href="profile_settings.html" class="btn-secondary">Configuración</a>
-<button class="btn-danger">Cerrar sesión</button>
+        <!-- FORM -->
+        <form class="profile-form">
 
-</main>
+          <!-- row -->
+          <div class="form-row">
+
+            <div class="input-group">
+              <label>Nombre Completo</label>
+
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+
+                <input
+                  type="text"
+                  value="Andrés Estudiante"
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <!-- row -->
+          <div class="form-row">
+
+            <div class="input-group">
+              <label>Colegio</label>
+
+              <div class="input-wrapper">
+                <i class="fas fa-school"></i>
+
+                <input
+                  type="text"
+                  value="Colegio San Juan Bosco"
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <!-- row -->
+          <div class="form-grid">
+
+            <div class="input-group">
+              <label>Meta ICFES</label>
+
+              <div class="input-wrapper">
+                <i class="fas fa-chart-line"></i>
+
+                <input
+                  type="number"
+                  value="350"
+                >
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label>Correo Electrónico</label>
+
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+
+                <input
+                  type="email"
+                  value="andres@athena.com"
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <!-- STATS -->
+          <div class="profile-stats">
+
+            <div class="stat-box">
+              <span>Simulacros</span>
+              <strong>12</strong>
+            </div>
+
+            <div class="stat-box">
+              <span>Puntaje Máx.</span>
+              <strong>340</strong>
+            </div>
+
+            <div class="stat-box">
+              <span>Racha</span>
+              <strong>12 días</strong>
+            </div>
+
+          </div>
+
+          <!-- ACTIONS -->
+          <div class="profile-actions">
+
+            <button
+              type="button"
+              class="btn btn--ghost"
+            >
+              Cancelar
+            </button>
+
+            <button
+              type="submit"
+              class="btn btn--primary"
+            >
+              <i class="fas fa-save"></i>
+              Guardar Cambios
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- FLOATING HELP -->
+    <div class="assistant-help">
+
+      <div class="assistant-help__message">
+        ¡Sigue así! Estás haciendo
+        un gran trabajo.
+      </div>
+
+      <div class="assistant-help__avatar">
+        🤖
+      </div>
+
+    </div>
+
+  </main>
+
 </div>
 
 </body>

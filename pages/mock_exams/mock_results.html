@@ -1,41 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Results</title>
-<link rel="stylesheet" href="../../styles/mock_exams.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATHENA | Resultado del Simulacro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="/pages/mock_exams/mock_results.css"/>
 </head>
+
 <body>
 
 <div class="layout">
 
-<aside class="sidebar">
-    <h2>ATHENA</h2>
-    
-    <a href="#">Inicio</a>
-        <a class="active" href="#">Simulacros</a>
-        <a href="#">Ranking</a>
-        <a href="#">Prácticas</a>
-        <a href="#">Tutor IA</a>
-        <a href="#">Perfil</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar__logo">
+      <i class="fas fa-brain"></i>
+      <span class="sidebar__brand">ATHENA</span>
+    </div>
+
+    <nav class="sidebar__nav">
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-clipboard-check"></i>
+        <span>Simulacros</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--active">
+        <i class="fas fa-dumbbell"></i>
+        <span>Prácticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-robot"></i>
+        <span>Tutor IA</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-chart-pie"></i>
+        <span>Estadísticas</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fas fa-user-circle"></i>
+        <span>Perfil</span>
+      </a>
+
+      <a href="#" class="sidebar__link sidebar__link--notifications">
+        <i class="fas fa-bell"></i>
+        <span>Notificaciones</span>
+        <span class="sidebar__badge">3</span>
+      </a>
+
     </nav>
-</aside>
 
-<main class="main">
+  </aside>
 
-<h1>Resultados</h1>
+  <!-- MAIN -->
+  <main class="main">
 
-<div class="card">
-    <h2>75%</h2>
-    <p>15 correctas • 5 incorrectas</p>
-</div>
+    <div class="main__content">
 
-<div class="actions">
-    <button class="btn-secondary">Reintentar</button>
-    <button class="btn-primary">Ver respuestas</button>
-</div>
+      <!-- RESULTADO -->
+      <section class="result-card">
 
-</main>
+        <h1>¡Simulacro Finalizado!</h1>
+
+        <p>
+          Aquí están tus resultados globales.
+        </p>
+
+        <div class="score-circle">
+
+          <div class="score-circle__inner">
+
+            <h2>315</h2>
+
+            <span>Puntos ICFES</span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-grid">
+
+        <!-- DESEMPEÑO -->
+        <div class="card">
+
+          <h3>
+            <i class="fas fa-chart-column"></i>
+            Desempeño General
+          </h3>
+
+          <div class="donut-chart">
+
+            <svg viewBox="0 0 42 42">
+
+              <!-- fondo -->
+              <circle
+                cx="21"
+                cy="21"
+                r="15.915"
+                fill="transparent"
+                stroke="#1E293B"
+                stroke-width="3"
+              />
+
+              <!-- correctas -->
+              <circle
+                cx="21"
+                cy="21"
+                r="15.915"
+                fill="transparent"
+                stroke="#22C55E"
+                stroke-width="3"
+                stroke-dasharray="68 32"
+                stroke-linecap="round"
+                transform="rotate(-90 21 21)"
+              />
+
+              <!-- incorrectas -->
+              <circle
+                cx="21"
+                cy="21"
+                r="15.915"
+                fill="transparent"
+                stroke="#EF4444"
+                stroke-width="3"
+                stroke-dasharray="18 82"
+                stroke-dashoffset="-68"
+                stroke-linecap="round"
+                transform="rotate(-90 21 21)"
+              />
+
+              <!-- omitidas -->
+              <circle
+                cx="21"
+                cy="21"
+                r="15.915"
+                fill="transparent"
+                stroke="#94A3B8"
+                stroke-width="3"
+                stroke-dasharray="8 92"
+                stroke-dashoffset="-86"
+                stroke-linecap="round"
+                transform="rotate(-90 21 21)"
+              />
+
+            </svg>
+
+          </div>
+
+          <div class="legend">
+
+            <div class="legend-item">
+              <span class="dot dot--green"></span>
+              Correctas
+            </div>
+
+            <div class="legend-item">
+              <span class="dot dot--red"></span>
+              Incorrectas
+            </div>
+
+            <div class="legend-item">
+              <span class="dot dot--gray"></span>
+              Omitidas
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RESULTADOS -->
+        <div class="card">
+
+          <h3>Resultados por Área</h3>
+
+          <div class="subject">
+
+            <div class="subject__top">
+              <span>Matemáticas</span>
+              <span>68/100</span>
+            </div>
+
+            <div class="subject__bar">
+              <div class="subject__fill green" style="width:68%"></div>
+            </div>
+
+          </div>
+
+          <div class="subject">
+
+            <div class="subject__top">
+              <span>Lectura Crítica</span>
+              <span>45/100</span>
+            </div>
+
+            <div class="subject__bar">
+              <div class="subject__fill red" style="width:45%"></div>
+            </div>
+
+          </div>
+
+          <div class="subject">
+
+            <div class="subject__top">
+              <span>Sociales</span>
+              <span>55/100</span>
+            </div>
+
+            <div class="subject__bar">
+              <div class="subject__fill yellow" style="width:55%"></div>
+            </div>
+
+          </div>
+
+          <div class="subject">
+
+            <div class="subject__top">
+              <span>Ciencias</span>
+              <span>72/100</span>
+            </div>
+
+            <div class="subject__bar">
+              <div class="subject__fill blue" style="width:72%"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- BOTONES -->
+      <section class="actions">
+
+        <button class="btn btn--secondary">
+          Revisar Respuestas
+        </button>
+
+        <button class="btn btn--primary">
+          Explicación con Tutor IA
+        </button>
+
+      </section>
+
+    </div>
+
+  </main>
+
 </div>
 
 </body>

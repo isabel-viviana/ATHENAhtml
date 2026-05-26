@@ -1,211 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ATHENA | Tutor IA</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Tutor IA</title>
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
 
-  <link rel="stylesheet" href="chat.css">
-</head>
+        <link rel="stylesheet" href="chat.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
+    </head>
 
-<body>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
+                </div>
 
-<div class="layout">
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+                    <a
+                        href="../mock_exams/mock_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
 
-    <div class="sidebar__logo">
-      <i class="fas fa-brain"></i>
-      <span class="sidebar__brand">ATHENA</span>
-    </div>
+                    <a
+                        href="../practices/practice_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
 
-    <nav class="sidebar__nav">
+                    <a
+                        href="chat.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
 
-      <a href="../dashboards/dashboard.html" class="sidebar__link">
-        <i class="fas fa-home"></i>
-        <span>Inicio</span>
-      </a>
+                    <a
+                        href="../statistics/statistics.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
 
-      <a href="../mock_exams/mock_config.html" class="sidebar__link">
-        <i class="fas fa-clipboard-check"></i>
-        <span>Simulacros</span>
-      </a>
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
 
-      <a href="../practices/practice_config.html" class="sidebar__link">
-        <i class="fas fa-dumbbell"></i>
-        <span>Prácticas</span>
-      </a>
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
 
-      <a href="chat.html" class="sidebar__link sidebar__link--active">
-        <i class="fas fa-robot"></i>
-        <span>Tutor IA</span>
-      </a>
+            <!-- MAIN -->
+            <main class="main">
+                <div class="main__content">
+                    <!-- HEADER -->
+                    <section class="tutor-header">
+                        <div class="tutor-header__left">
+                            <div class="tutor-avatar">
+                                <img
+                                    src="../../images/Zorrito_10.png"
+                                    alt="Tutor ATHENA"
+                                />
+                            </div>
 
-      <a href="../statistics/statistics.html" class="sidebar__link">
-        <i class="fas fa-chart-pie"></i>
-        <span>Estadísticas</span>
-      </a>
+                            <div>
+                                <h1>Tutor ATHENA</h1>
 
-      <a href="../profiles/profile.html" class="sidebar__link">
-        <i class="fas fa-user-circle"></i>
-        <span>Perfil</span>
-      </a>
+                                <div class="tutor-status">
+                                    <span class="status-dot"></span>
+                                    En línea
+                                </div>
+                            </div>
+                        </div>
 
-      <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-        <i class="fas fa-bell"></i>
-        <span>Notificaciones</span>
-        <span class="sidebar__badge">3</span>
-      </a>
+                        <button class="refresh-btn">
+                            <i class="fas fa-rotate-right"></i>
+                        </button>
+                    </section>
 
-    </nav>
+                    <!-- IA MESSAGE -->
+                    <section class="ai-message">
+                        <div class="ai-message__top">
+                            <div class="ai-message img">
+                                <img
+                                    src="../../images/Zorrito_3.png"
+                                    alt="ATHENA"
+                                />
+                            </div>
 
-  </aside>
+                            <div>
+                                <h3>Hola, soy ATHENA ✨</h3>
+                                <p>
+                                    Puedo ayudarte con preguntas tipo ICFES,
+                                    análisis de resultados y explicaciones paso
+                                    a paso.
+                                </p>
+                            </div>
+                        </div>
 
-  <!-- MAIN -->
-  <main class="main">
+                        <div class="tip-box">
+                            <i class="fas fa-bolt"></i>
+                            <span>
+                                Te recomiendo enfocarte en
+                                <strong>Inglés</strong> esta semana.
+                            </span>
+                        </div>
+                    </section>
 
-    <div class="main__content">
+                    <!-- ACTIONS -->
+                    <section class="actions-grid">
+                        <button class="action-card action-card--blue">
+                            <i class="fas fa-book-open"></i>
+                            <span>Explicar un concepto</span>
+                        </button>
 
-      <!-- HEADER -->
-      <section class="tutor-header">
+                        <button class="action-card action-card--purple">
+                            <i class="fas fa-circle-question"></i>
+                            <span>Resolver una pregunta</span>
+                        </button>
 
-        <div class="tutor-header__left">
+                        <button class="action-card action-card--green">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analizar resultados</span>
+                        </button>
 
-          <div class="tutor-avatar">
-            <img src="/images/Zorrito_10.png" alt="Tutor ATHENA">
-          </div>
+                        <button class="action-card action-card--yellow">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Practicar conmigo</span>
+                        </button>
+                    </section>
 
-          <div>
-            <h1>Tutor ATHENA</h1>
+                    <!-- EMPTY CHAT -->
+                    <section class="chat-empty">
+                        <div class="chat-empty__icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
 
-            <div class="tutor-status">
-              <span class="status-dot"></span>
-              En línea
-            </div>
-          </div>
+                        <h3>Tu conversación aparecerá aquí</h3>
 
+                        <p>
+                            Pregunta cualquier duda académica y ATHENA te
+                            ayudará.
+                        </p>
+                    </section>
+
+                    <!-- INPUT -->
+                    <section class="chat-input">
+                        <!-- FILE UPLOAD -->
+                        <label class="upload-btn">
+                            <input type="file" hidden />
+
+                            <i class="fas fa-paperclip"></i>
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Ej: Explícame esta pregunta de lectura crítica..."
+                        />
+
+                        <button class="image-btn">
+                            <i class="fas fa-image"></i>
+                        </button>
+
+                        <button class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </section>
+
+                    <p class="disclaimer">
+                        ⚠ ATHENA puede cometer errores. Verifica siempre la
+                        información importante.
+                    </p>
+                </div>
+            </main>
         </div>
-
-        <button class="refresh-btn">
-          <i class="fas fa-rotate-right"></i>
-        </button>
-
-      </section>
-
-      <!-- IA MESSAGE -->
-      <section class="ai-message">
-
-        <div class="ai-message__top">
-          <div class="ai-message img">
-            <img src="/images/Zorrito_3.png" alt="ATHENA">
-          </div>
-
-          <div>
-            <h3>Hola, soy ATHENA ✨</h3>
-            <p>
-              Puedo ayudarte con preguntas tipo ICFES,
-              análisis de resultados y explicaciones paso a paso.
-            </p>
-          </div>
-        </div>
-
-        <div class="tip-box">
-          <i class="fas fa-bolt"></i>
-          <span>
-            Te recomiendo enfocarte en
-            <strong>Inglés</strong> esta semana.
-          </span>
-        </div>
-
-      </section>
-
-      <!-- ACTIONS -->
-      <section class="actions-grid">
-
-        <button class="action-card action-card--blue">
-          <i class="fas fa-book-open"></i>
-          <span>Explicar un concepto</span>
-        </button>
-
-        <button class="action-card action-card--purple">
-          <i class="fas fa-circle-question"></i>
-          <span>Resolver una pregunta</span>
-        </button>
-
-        <button class="action-card action-card--green">
-          <i class="fas fa-chart-line"></i>
-          <span>Analizar resultados</span>
-        </button>
-
-        <button class="action-card action-card--yellow">
-          <i class="fas fa-bullseye"></i>
-          <span>Practicar conmigo</span>
-        </button>
-
-      </section>
-
-      <!-- EMPTY CHAT -->
-      <section class="chat-empty">
-
-        <div class="chat-empty__icon">
-          <i class="fas fa-comments"></i>
-        </div>
-
-        <h3>Tu conversación aparecerá aquí</h3>
-
-        <p>
-          Pregunta cualquier duda académica y ATHENA te ayudará.
-        </p>
-
-      </section>
-
-      <!-- INPUT -->
-      <section class="chat-input">
-
-        <!-- FILE UPLOAD -->
-        <label class="upload-btn">
-
-          <input type="file" hidden>
-
-          <i class="fas fa-paperclip"></i>
-
-        </label>
-
-        <input
-          type="text"
-          placeholder="Ej: Explícame esta pregunta de lectura crítica..."
-        >
-
-        <button class="image-btn">
-          <i class="fas fa-image"></i>
-        </button>
-
-        <button class="send-btn">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-
-      </section>
-
-      <p class="disclaimer">
-        ⚠ ATHENA puede cometer errores. Verifica siempre la información importante.
-      </p>
-
-    </div>
-
-  </main>
-
-</div>
-
-</body>
+    </body>
 </html>

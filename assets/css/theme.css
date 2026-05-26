@@ -1,0 +1,179 @@
+:root {
+    /* Background */
+    --bg-primary: #020b1d;
+    --bg-secondary: #08152e;
+    --bg-elevated: #0d1f42;
+
+    /* Blues */
+    --primary-blue: #2f80ff;
+    --primary-blue-hover: #4da2ff;
+    --primary-blue-dark: #173d7a;
+
+    /* Functional colors */
+    --math-color: #2f80ff;
+    --reading-color: #8b5cf6;
+    --social-color: #f4b942;
+    --science-color: #22c55e;
+    --english-color: #ef4444;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b8c5d6;
+    --text-muted: #7c8ca5;
+
+    /* Borders */
+    --border-default: rgba(255, 255, 255, 0.08);
+    --border-active: rgba(47, 128, 255, 0.45);
+
+    /* Shadows */
+    --shadow-blue: 0 0 20px rgba(47, 128, 255, 0.25);
+    --shadow-hover: 0 0 28px rgba(77, 162, 255, 0.35);
+
+    /* Radii */
+    --radius-cards: 20px;
+    --radius-buttons: 16px;
+    --radius-sidebar-items: 14px;
+    --radius-pill: 999px;
+
+    /* Transitions */
+    --transition-default: all 0.3s ease;
+
+    /* Gradients */
+    --gradient-app-bg: linear-gradient(180deg, #041127 0%, #020b1d 100%);
+    --gradient-standard-card: linear-gradient(
+        135deg,
+        rgba(15, 40, 90, 0.95) 0%,
+        rgba(6, 18, 42, 0.95) 100%
+    );
+    --gradient-primary-button: linear-gradient(
+        135deg,
+        #2f80ff 0%,
+        #1d5fd1 100%
+    );
+    --gradient-active-sidebar: linear-gradient(
+        135deg,
+        rgba(47, 128, 255, 0.22) 0%,
+        rgba(47, 128, 255, 0.08) 100%
+    );
+    --gradient-premium-card: linear-gradient(
+        135deg,
+        rgba(23, 61, 122, 1) 0%,
+        rgba(8, 21, 46, 1) 100%
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
+    background: var(--gradient-app-bg);
+    color: var(--text-primary);
+}
+
+.card {
+    background: var(--gradient-standard-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-cards);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: var(--radius-buttons);
+    border: 1px solid var(--border-default);
+    padding: 12px 18px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition-default);
+}
+
+.btn--primary {
+    background: var(--gradient-primary-button);
+    border-color: rgba(47, 128, 255, 0.6);
+}
+
+.btn--primary:hover {
+    box-shadow: var(--shadow-blue);
+    transform: translateY(-1px);
+}
+
+.btn--secondary {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: var(--border-default);
+    color: var(--text-secondary);
+}
+
+.btn--secondary:hover {
+    background: rgba(47, 128, 255, 0.08);
+    border-color: var(--border-active);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-blue);
+    transform: translateY(-1px);
+}
+
+.sidebar {
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-default);
+}
+
+.sidebar__link {
+    border-radius: var(--radius-sidebar-items);
+    border: 1px solid transparent;
+    transition: var(--transition-default);
+}
+
+.sidebar__link:hover {
+    background: rgba(47, 128, 255, 0.1);
+    border-color: var(--border-active);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-blue);
+}
+
+.sidebar__link--active {
+    background: var(--gradient-active-sidebar);
+    border-color: var(--border-active);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-blue);
+}
+
+.sidebar__badge {
+    border-radius: var(--radius-pill);
+    background: var(--english-color);
+    color: #fff;
+    opacity: 1;
+}
+
+input,
+select,
+textarea {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-default);
+    border-radius: 14px;
+    outline: none;
+    transition: var(--transition-default);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--border-active);
+    box-shadow: 0 0 0 4px rgba(47, 128, 255, 0.15);
+}

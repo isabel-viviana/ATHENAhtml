@@ -1,326 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athena - Práctica por Áreas</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Athena - Práctica por Áreas</title>
 
-    <link rel="stylesheet" href="practice_config.css">
+        <link rel="stylesheet" href="practice_config.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+    </head>
 
-<body>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
+                </div>
 
-<div class="layout">
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+                    <a
+                        href="../mock_exams/mock_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
 
-        <div class="sidebar__logo">
-            <i class="fas fa-brain"></i>
-            <span class="sidebar__brand">ATHENA</span>
+                    <a
+                        href="practice_config.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
+
+                    <a href="../ai_tutor/chat.html" class="sidebar__link">
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
+
+                    <a
+                        href="../statistics/statistics.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
+
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
+
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="main-content">
+                <header class="page-header">
+                    <div class="header-text">
+                        <h1>Práctica por Áreas</h1>
+
+                        <p>
+                            Mejora tus habilidades enfocándote en temas
+                            específicos.
+                        </p>
+                    </div>
+
+                    <!-- OBJETIVO DIARIO -->
+                    <div class="daily-goal-card">
+                        <div class="goal-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+
+                        <div class="goal-info">
+                            <p>
+                                Objetivo Diario:
+                                <span class="goal-count">10/20</span>
+                                Preguntas
+                            </p>
+
+                            <div class="goal-progress-bg">
+                                <div
+                                    class="goal-progress-fill"
+                                    style="width: 50%"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- GRID ÁREAS -->
+                <div class="areas-grid">
+                    <!-- MATEMÁTICAS -->
+                    <div class="area-card math-area">
+                        <div class="card-top">
+                            <div class="area-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+
+                            <i class="fas fa-chevron-right arrow-detail"></i>
+                        </div>
+
+                        <h3>Matemáticas</h3>
+
+                        <p class="description">
+                            Álgebra, Geometría, Estadística
+                        </p>
+
+                        <div class="mastery-section">
+                            <div class="mastery-label">
+                                <span>Dominio</span>
+                                <span class="percentage">65%</span>
+                            </div>
+
+                            <div class="mastery-bar">
+                                <div class="fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <a class="practice-btn" href="practice_full.html">
+                            Practicar ahora
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- LECTURA -->
+                    <div class="area-card reading-area">
+                        <div class="card-top">
+                            <div class="area-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+
+                            <i class="fas fa-chevron-right arrow-detail"></i>
+                        </div>
+
+                        <h3>Lectura Crítica</h3>
+
+                        <p class="description">
+                            Textos continuos y discontinuos
+                        </p>
+
+                        <div class="mastery-section">
+                            <div class="mastery-label">
+                                <span>Dominio</span>
+                                <span class="percentage">40%</span>
+                            </div>
+
+                            <div class="mastery-bar">
+                                <div class="fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+
+                        <a class="practice-btn" href="practice_full.html">
+                            Practicar ahora
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- SOCIALES -->
+                    <div class="area-card social-area">
+                        <div class="card-top">
+                            <div class="area-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+
+                            <i class="fas fa-chevron-right arrow-detail"></i>
+                        </div>
+
+                        <h3>Sociales y Ciudadanas</h3>
+
+                        <p class="description">
+                            Historia, Geografía, Competencias
+                        </p>
+
+                        <div class="mastery-section">
+                            <div class="mastery-label">
+                                <span>Dominio</span>
+                                <span class="percentage">80%</span>
+                            </div>
+
+                            <div class="mastery-bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <a class="practice-btn" href="practice_full.html">
+                            Practicar ahora
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- CIENCIAS -->
+                    <div class="area-card science-area">
+                        <div class="card-top">
+                            <div class="area-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+
+                            <i class="fas fa-chevron-right arrow-detail"></i>
+                        </div>
+
+                        <h3>Ciencias Naturales</h3>
+
+                        <p class="description">Biología, Física, Química</p>
+
+                        <div class="mastery-section">
+                            <div class="mastery-label">
+                                <span>Dominio</span>
+                                <span class="percentage">55%</span>
+                            </div>
+
+                            <div class="mastery-bar">
+                                <div class="fill" style="width: 55%"></div>
+                            </div>
+                        </div>
+
+                        <a class="practice-btn" href="practice_full.html">
+                            Practicar ahora
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- INGLÉS -->
+                    <div class="area-card english-area">
+                        <div class="card-top">
+                            <div class="area-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+
+                            <div class="improve-tag">
+                                <i class="fas fa-chart-line"></i>
+                                Área a mejorar
+                            </div>
+
+                            <i class="fas fa-chevron-right arrow-detail"></i>
+                        </div>
+
+                        <h3>Inglés</h3>
+
+                        <p class="description">
+                            Gramática, Vocabulario, Comprensión
+                        </p>
+
+                        <div class="mastery-section">
+                            <div class="mastery-label">
+                                <span>Dominio</span>
+                                <span class="percentage">30%</span>
+                            </div>
+
+                            <div class="mastery-bar">
+                                <div class="fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <a class="practice-btn" href="practice_full.html">
+                            Practicar ahora
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </main>
+
+            <!-- BOTÓN IA -->
+            <div class="ai-button">
+                <img src="https://via.placeholder.com/50" alt="IA" />
+            </div>
+
+            <!-- HELP BUTTON -->
+            <div class="help-btn">?</div>
         </div>
-
-        <nav class="sidebar__nav">
-
-            <a href="../dashboards/dashboard.html" class="sidebar__link">
-                <i class="fas fa-home"></i>
-                <span>Inicio</span>
-            </a>
-
-            <a href="../mock_exams/mock_config.html" class="sidebar__link">
-                <i class="fas fa-clipboard-check"></i>
-                <span>Simulacros</span>
-            </a>
-
-            <a href="practice_config.html" class="sidebar__link sidebar__link--active">
-                <i class="fas fa-dumbbell"></i>
-                <span>Prácticas</span>
-            </a>
-
-            <a href="../ai_tutor/chat.html" class="sidebar__link">
-                <i class="fas fa-robot"></i>
-                <span>Tutor IA</span>
-            </a>
-
-            <a href="../statistics/statistics.html" class="sidebar__link">
-                <i class="fas fa-chart-pie"></i>
-                <span>Estadísticas</span>
-            </a>
-
-            <a href="../profiles/profile.html" class="sidebar__link">
-                <i class="fas fa-user-circle"></i>
-                <span>Perfil</span>
-            </a>
-
-            <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-                <i class="fas fa-bell"></i>
-                <span>Notificaciones</span>
-                <span class="sidebar__badge">3</span>
-            </a>
-
-        </nav>
-
-    </aside>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content">
-
-        <header class="page-header">
-
-            <div class="header-text">
-
-                <h1>Práctica por Áreas</h1>
-
-                <p>
-                    Mejora tus habilidades enfocándote en temas específicos.
-                </p>
-
-            </div>
-
-            <!-- OBJETIVO DIARIO -->
-            <div class="daily-goal-card">
-
-                <div class="goal-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-
-                <div class="goal-info">
-
-                    <p>
-                        Objetivo Diario:
-                        <span class="goal-count">10/20</span>
-                        Preguntas
-                    </p>
-
-                    <div class="goal-progress-bg">
-                        <div class="goal-progress-fill" style="width:50%;"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </header>
-
-        <!-- GRID ÁREAS -->
-        <div class="areas-grid">
-
-            <!-- MATEMÁTICAS -->
-            <div class="area-card math-area">
-
-                <div class="card-top">
-
-                    <div class="area-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-
-                    <i class="fas fa-chevron-right arrow-detail"></i>
-
-                </div>
-
-                <h3>Matemáticas</h3>
-
-                <p class="description">
-                    Álgebra, Geometría, Estadística
-                </p>
-
-                <div class="mastery-section">
-
-                    <div class="mastery-label">
-                        <span>Dominio</span>
-                        <span class="percentage">65%</span>
-                    </div>
-
-                    <div class="mastery-bar">
-                        <div class="fill" style="width:65%;"></div>
-                    </div>
-
-                </div>
-
-                <button class="practice-btn">
-                    Practicar ahora
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-            <!-- LECTURA -->
-            <div class="area-card reading-area">
-
-                <div class="card-top">
-
-                    <div class="area-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-
-                    <i class="fas fa-chevron-right arrow-detail"></i>
-
-                </div>
-
-                <h3>Lectura Crítica</h3>
-
-                <p class="description">
-                    Textos continuos y discontinuos
-                </p>
-
-                <div class="mastery-section">
-
-                    <div class="mastery-label">
-                        <span>Dominio</span>
-                        <span class="percentage">40%</span>
-                    </div>
-
-                    <div class="mastery-bar">
-                        <div class="fill" style="width:40%;"></div>
-                    </div>
-
-                </div>
-
-                <button class="practice-btn">
-                    Practicar ahora
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-            <!-- SOCIALES -->
-            <div class="area-card social-area">
-
-                <div class="card-top">
-
-                    <div class="area-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-
-                    <i class="fas fa-chevron-right arrow-detail"></i>
-
-                </div>
-
-                <h3>Sociales y Ciudadanas</h3>
-
-                <p class="description">
-                    Historia, Geografía, Competencias
-                </p>
-
-                <div class="mastery-section">
-
-                    <div class="mastery-label">
-                        <span>Dominio</span>
-                        <span class="percentage">80%</span>
-                    </div>
-
-                    <div class="mastery-bar">
-                        <div class="fill" style="width:80%;"></div>
-                    </div>
-
-                </div>
-
-                <button class="practice-btn">
-                    Practicar ahora
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-            <!-- CIENCIAS -->
-            <div class="area-card science-area">
-
-                <div class="card-top">
-
-                    <div class="area-icon">
-                        <i class="fas fa-atom"></i>
-                    </div>
-
-                    <i class="fas fa-chevron-right arrow-detail"></i>
-
-                </div>
-
-                <h3>Ciencias Naturales</h3>
-
-                <p class="description">
-                    Biología, Física, Química
-                </p>
-
-                <div class="mastery-section">
-
-                    <div class="mastery-label">
-                        <span>Dominio</span>
-                        <span class="percentage">55%</span>
-                    </div>
-
-                    <div class="mastery-bar">
-                        <div class="fill" style="width:55%;"></div>
-                    </div>
-
-                </div>
-
-                <button class="practice-btn">
-                    Practicar ahora
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-            <!-- INGLÉS -->
-            <div class="area-card english-area">
-
-                <div class="card-top">
-
-                    <div class="area-icon">
-                        <i class="fas fa-comment"></i>
-                    </div>
-
-                    <div class="improve-tag">
-                        <i class="fas fa-chart-line"></i>
-                        Área a mejorar
-                    </div>
-
-                    <i class="fas fa-chevron-right arrow-detail"></i>
-
-                </div>
-
-                <h3>Inglés</h3>
-
-                <p class="description">
-                    Gramática, Vocabulario, Comprensión
-                </p>
-
-                <div class="mastery-section">
-
-                    <div class="mastery-label">
-                        <span>Dominio</span>
-                        <span class="percentage">30%</span>
-                    </div>
-
-                    <div class="mastery-bar">
-                        <div class="fill" style="width:30%;"></div>
-                    </div>
-
-                </div>
-
-                <button class="practice-btn">
-                    Practicar ahora
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- BOTÓN IA -->
-    <div class="ai-button">
-        <img src="https://via.placeholder.com/50" alt="IA">
-    </div>
-
-    <!-- HELP BUTTON -->
-    <div class="help-btn">?</div>
-
-</div>
-
-</body>
+    </body>
 </html>

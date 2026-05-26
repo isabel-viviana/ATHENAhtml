@@ -14,427 +14,427 @@
    RESET
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 /* =========================
    BODY
 ========================= */
 
-body{
-    background-color:var(--bg-dark);
-    color:white;
-    overflow-x:hidden;
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
 }
 
 /* =========================
    LAYOUT
 ========================= */
 
-.layout{
-    display:flex;
-    min-height:100vh;
+.layout {
+    display: flex;
+    min-height: 100vh;
 }
 
 /* =========================
    SIDEBAR
 ========================= */
 
-.sidebar{
-    width:250px;
-    background-color:var(--bg-dark);
-    border-right:1px solid #1a2238;
-    padding:28px 20px;
-    display:flex;
-    flex-direction:column;
-    flex-shrink:0;
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-dark);
+    border-right: 1px solid #1a2238;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
 }
 
-.sidebar__logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:40px;
-    padding-left:8px;
+.sidebar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding-left: 8px;
 }
 
-.sidebar__logo i{
-    font-size:26px;
-    color:#6366F1;
+.sidebar__logo i {
+    font-size: 26px;
+    color: #6366f1;
 }
 
-.sidebar__brand{
-    font-size:22px;
-    font-weight:700;
+.sidebar__brand {
+    font-size: 22px;
+    font-weight: 700;
 }
 
-.sidebar__nav{
-    display:flex;
-    flex-direction:column;
-    gap:4px;
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.sidebar__link{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:12px 14px;
-    border-radius:12px;
-    text-decoration:none;
-    color:var(--text-dim);
-    transition:0.2s ease;
-    font-size:15px;
-    font-weight:500;
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: 0.2s ease;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.sidebar__link i{
-    width:20px;
-    text-align:center;
+.sidebar__link i {
+    width: 20px;
+    text-align: center;
 }
 
-.sidebar__link:hover{
-    background:rgba(99,102,241,0.15);
-    color:#6366F1;
+.sidebar__link:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
 }
 
-.sidebar__link--active{
-    background:rgba(99,102,241,0.15);
-    color:#6366F1;
-    font-weight:600;
+.sidebar__link--active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    font-weight: 600;
 }
 
-.sidebar__link--notifications{
-    margin-top:20px;
-    border-top:1px solid #1a2238;
-    padding-top:18px;
-    border-radius:0;
+.sidebar__link--notifications {
+    margin-top: 20px;
+    border-top: 1px solid #1a2238;
+    padding-top: 18px;
+    border-radius: 0;
 }
 
-.sidebar__badge{
-    margin-left:auto;
-    background:#EF4444;
-    color:white;
-    font-size:11px;
-    font-weight:700;
-    padding:2px 7px;
-    border-radius:999px;
+.sidebar__badge {
+    margin-left: auto;
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
 }
 
 /* =========================
    MAIN CONTENT
 ========================= */
 
-.main-content{
-    flex:1;
-    padding:40px;
-    min-width:0;
+.main-content {
+    flex: 1;
+    padding: 40px;
+    min-width: 0;
 }
 
 /* =========================
    PAGE HEADER
 ========================= */
 
-.page-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:40px;
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.header-text h1{
-    font-size:2rem;
-    margin-bottom:8px;
+.header-text h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
 }
 
-.header-text p{
-    color:var(--text-dim);
+.header-text p {
+    color: var(--text-dim);
 }
 
 /* =========================
    DAILY GOAL CARD
 ========================= */
 
-.daily-goal-card{
-    background:#0a1128;
-    padding:15px 20px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    border:1px solid #1a2238;
+.daily-goal-card {
+    background: #0a1128;
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #1a2238;
 }
 
-.goal-icon{
-    color:#f6ad55;
-    font-size:1.5rem;
+.goal-icon {
+    color: #f6ad55;
+    font-size: 1.5rem;
 }
 
-.goal-count{
-    color:#f6ad55;
-    font-weight:bold;
+.goal-count {
+    color: #f6ad55;
+    font-weight: bold;
 }
 
-.goal-progress-bg{
-    width:120px;
-    height:6px;
-    background:#1a2238;
-    border-radius:10px;
-    margin-top:8px;
+.goal-progress-bg {
+    width: 120px;
+    height: 6px;
+    background: #1a2238;
+    border-radius: 10px;
+    margin-top: 8px;
 }
 
-.goal-progress-fill{
-    height:100%;
-    background:#f6ad55;
-    border-radius:10px;
+.goal-progress-fill {
+    height: 100%;
+    background: #f6ad55;
+    border-radius: 10px;
 }
 
 /* =========================
    AREAS GRID
 ========================= */
 
-.areas-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
-    gap:25px;
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 /* =========================
    AREA CARD
 ========================= */
 
-.area-card{
-    background:var(--bg-card);
-    border-radius:24px;
-    padding:25px;
-    border:1px solid rgba(255, 255, 255, 0.05);
-    position:relative;
-    transition:transform 0.3s ease;
+.area-card {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.area-card:hover{
-    transform:translateY(-5px);
+.area-card:hover {
+    transform: translateY(-5px);
 }
 
-.card-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:20px;
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
-.area-icon{
-    width:45px;
-    height:45px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.2rem;
+.area-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
 
-.arrow-detail{
-    color:var(--text-dim);
-    cursor:pointer;
+.arrow-detail {
+    color: var(--text-dim);
+    cursor: pointer;
 }
 
-.area-card h3{
-    font-size:1.4rem;
-    margin-bottom:5px;
+.area-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
 }
 
-.description{
-    font-size:0.9rem;
-    color:var(--text-dim);
-    margin-bottom:30px;
+.description {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 30px;
 }
 
 /* =========================
    MASTERY
 ========================= */
 
-.mastery-section{
-    margin-bottom:25px;
+.mastery-section {
+    margin-bottom: 25px;
 }
 
-.mastery-label{
-    display:flex;
-    justify-content:space-between;
-    font-size:0.9rem;
-    margin-bottom:10px;
+.mastery-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
-.mastery-bar{
-    height:8px;
-    background:rgba(255,255,255,0.05);
-    border-radius:10px;
+.mastery-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
 }
 
-.fill{
-    height:100%;
-    border-radius:10px;
+.fill {
+    height: 100%;
+    border-radius: 10px;
 }
 
 /* =========================
    BUTTONS
 ========================= */
 
-.practice-btn{
-    width:100%;
-    padding:12px;
-    border-radius:14px;
-    border:none;
-    color:white;
-    font-weight:600;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    cursor:pointer;
-    background:rgba(255,255,255,0.05);
-    transition:background 0.3s;
+.practice-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s;
 }
 
 /* =========================
    AREA COLORS
 ========================= */
 
-.math-area .area-icon{
-    background:rgba(49, 130, 206, 0.2);
-    color:var(--math-color);
+.math-area .area-icon {
+    background: rgba(49, 130, 206, 0.2);
+    color: var(--math-color);
 }
 
-.math-area .fill{
-    background:var(--math-color);
+.math-area .fill {
+    background: var(--math-color);
 }
 
-.math-area .percentage{
-    color:var(--math-color);
+.math-area .percentage {
+    color: var(--math-color);
 }
 
-.math-area .practice-btn{
-    background:rgba(49, 130, 206, 0.15);
-    border:1px solid rgba(49, 130, 206, 0.3);
+.math-area .practice-btn {
+    background: rgba(49, 130, 206, 0.15);
+    border: 1px solid rgba(49, 130, 206, 0.3);
 }
 
-.reading-area .area-icon{
-    background:rgba(128, 90, 213, 0.2);
-    color:var(--reading-color);
+.reading-area .area-icon {
+    background: rgba(128, 90, 213, 0.2);
+    color: var(--reading-color);
 }
 
-.reading-area .fill{
-    background:var(--reading-color);
+.reading-area .fill {
+    background: var(--reading-color);
 }
 
-.reading-area .percentage{
-    color:var(--reading-color);
+.reading-area .percentage {
+    color: var(--reading-color);
 }
 
-.reading-area .practice-btn{
-    background:rgba(128, 90, 213, 0.15);
-    border:1px solid rgba(128, 90, 213, 0.3);
+.reading-area .practice-btn {
+    background: rgba(128, 90, 213, 0.15);
+    border: 1px solid rgba(128, 90, 213, 0.3);
 }
 
-.social-area .area-icon{
-    background:rgba(214, 158, 46, 0.2);
-    color:var(--social-color);
+.social-area .area-icon {
+    background: rgba(214, 158, 46, 0.2);
+    color: var(--social-color);
 }
 
-.social-area .fill{
-    background:var(--social-color);
+.social-area .fill {
+    background: var(--social-color);
 }
 
-.social-area .percentage{
-    color:var(--social-color);
+.social-area .percentage {
+    color: var(--social-color);
 }
 
-.social-area .practice-btn{
-    background:rgba(214, 158, 46, 0.15);
-    border:1px solid rgba(214, 158, 46, 0.3);
+.social-area .practice-btn {
+    background: rgba(214, 158, 46, 0.15);
+    border: 1px solid rgba(214, 158, 46, 0.3);
 }
 
-.science-area .area-icon{
-    background:rgba(56, 161, 105, 0.2);
-    color:var(--science-color);
+.science-area .area-icon {
+    background: rgba(56, 161, 105, 0.2);
+    color: var(--science-color);
 }
 
-.science-area .fill{
-    background:var(--science-color);
+.science-area .fill {
+    background: var(--science-color);
 }
 
-.science-area .percentage{
-    color:var(--science-color);
+.science-area .percentage {
+    color: var(--science-color);
 }
 
-.science-area .practice-btn{
-    background:rgba(56, 161, 105, 0.15);
-    border:1px solid rgba(56, 161, 105, 0.3);
+.science-area .practice-btn {
+    background: rgba(56, 161, 105, 0.15);
+    border: 1px solid rgba(56, 161, 105, 0.3);
 }
 
-.english-area .area-icon{
-    background:rgba(229, 62, 62, 0.2);
-    color:var(--english-color);
+.english-area .area-icon {
+    background: rgba(229, 62, 62, 0.2);
+    color: var(--english-color);
 }
 
-.english-area .fill{
-    background:var(--english-color);
+.english-area .fill {
+    background: var(--english-color);
 }
 
-.english-area .percentage{
-    color:var(--english-color);
+.english-area .percentage {
+    color: var(--english-color);
 }
 
-.english-area .practice-btn{
-    background:rgba(229, 62, 62, 0.15);
-    border:1px solid rgba(229, 62, 62, 0.3);
+.english-area .practice-btn {
+    background: rgba(229, 62, 62, 0.15);
+    border: 1px solid rgba(229, 62, 62, 0.3);
 }
 
 /* =========================
    IMPROVE TAG
 ========================= */
 
-.improve-tag{
-    background:rgba(229, 62, 62, 0.2);
-    color:var(--english-color);
-    font-size:0.75rem;
-    padding:4px 10px;
-    border-radius:8px;
-    margin-right:auto;
-    margin-left:15px;
+.improve-tag {
+    background: rgba(229, 62, 62, 0.2);
+    color: var(--english-color);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: 15px;
 }
 
 /* =========================
    FLOATING ELEMENTS
 ========================= */
 
-.ai-button{
-    position:fixed;
-    right:30px;
-    bottom:80px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#2b6cb0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 8px 16px rgba(0,0,0,0.4);
+.ai-button {
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2b6cb0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.help-btn{
-    position:fixed;
-    right:30px;
-    bottom:20px;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#1a2238;
-    color:var(--text-dim);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
+.help-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1a2238;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }

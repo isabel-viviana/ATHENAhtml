@@ -1,269 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ATHENA | Configurar Simulacro</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Configurar Simulacro</title>
 
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
 
-  <link rel="stylesheet" href="mock_config.css">
-</head>
-<body>
-
-<div class="layout">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-
-    <div class="sidebar__logo">
-      <i class="fas fa-brain"></i>
-      <span class="sidebar__brand">ATHENA</span>
-    </div>
-
-    <nav class="sidebar__nav">
-
-      <a href="../dashboards/dashboard.html" class="sidebar__link">
-        <i class="fas fa-home"></i>
-        <span>Inicio</span>
-      </a>
-
-      <a href="mock_config.html" class="sidebar__link">
-        <i class="fas fa-clipboard-check"></i>
-        <span>Simulacros</span>
-      </a>
-
-      <a href="../practices/practice_config.html" class="sidebar__link">
-        <i class="fas fa-dumbbell"></i>
-        <span>Prácticas</span>
-      </a>
-
-      <a href="../ai_tutor/chat.html" class="sidebar__link sidebar__link--active">
-        <i class="fas fa-robot"></i>
-        <span>Tutor IA</span>
-      </a>
-
-      <a href="../statistics/statistics.html" class="sidebar__link">
-        <i class="fas fa-chart-pie"></i>
-        <span>Estadísticas</span>
-      </a>
-
-      <a href="../profiles/profile.html" class="sidebar__link">
-        <i class="fas fa-user-circle"></i>
-        <span>Perfil</span>
-      </a>
-
-      <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-        <i class="fas fa-bell"></i>
-        <span>Notificaciones</span>
-        <span class="sidebar__badge">3</span>
-      </a>
-
-    </nav>
-
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <div class="main__content">
-
-      <!-- HEADER -->
-      <section class="page-header">
-
-        <div class="page-header__info">
-          <h1>Configurar Simulacro</h1>
-
-          <p>
-            Personaliza tu prueba según lo que necesites practicar hoy.
-          </p>
-        </div>
-
-      </section>
-
-      <!-- CONFIG GRID -->
-      <section class="config-grid">
-
-        <!-- LEFT -->
-        <div class="config-card">
-
-          <div class="card-title">
-            <i class="fas fa-gear"></i>
-            <h3>Tipo de Prueba</h3>
-          </div>
-
-          <!-- OPTION -->
-          <label class="option option--active">
-
-            <div class="option__top">
-
-              <div class="option__left">
-                <input type="radio" checked>
-
-                <div>
-                  <h4>Simulacro Completo ICFES</h4>
-                  <p>Todas las áreas, 4.5 horas</p>
+        <link rel="stylesheet" href="mock_config.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
                 </div>
-              </div>
 
-              <span class="recommended">
-                Recomendado
-              </span>
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
 
-            </div>
+                    <a href="mock_config.html" class="sidebar__link">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
 
-          </label>
+                    <a
+                        href="../practices/practice_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
 
-          <!-- OPTION -->
-          <label class="option">
+                    <a
+                        href="../ai_tutor/chat.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
 
-            <div class="option__left">
-              <input type="radio">
+                    <a
+                        href="../statistics/statistics.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
 
-              <div>
-                <h4>Por Área Específica</h4>
-                <p>Selecciona una o más áreas</p>
-              </div>
-            </div>
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
 
-          </label>
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
 
-          <!-- OPTION -->
-          <label class="option">
+            <!-- MAIN -->
+            <main class="main">
+                <div class="main__content">
+                    <!-- HEADER -->
+                    <section class="page-header">
+                        <div class="page-header__info">
+                            <h1>Configurar Simulacro</h1>
 
-            <div class="option__left">
-              <input type="radio">
+                            <p>
+                                Personaliza tu prueba según lo que necesites
+                                practicar hoy.
+                            </p>
+                        </div>
+                    </section>
 
-              <div>
-                <h4>Mini Simulacro</h4>
-                <p>Mitad de preguntas, 2 horas</p>
-              </div>
-            </div>
+                    <!-- CONFIG GRID -->
+                    <section class="config-grid">
+                        <!-- LEFT -->
+                        <div class="config-card">
+                            <div class="card-title">
+                                <i class="fas fa-gear"></i>
+                                <h3>Tipo de Prueba</h3>
+                            </div>
 
-          </label>
+                            <!-- OPTION -->
+                            <label class="option option--active">
+                                <div class="option__top">
+                                    <div class="option__left">
+                                        <input type="radio" checked />
 
-          <!-- EXTRA -->
-          <div class="extra-settings">
+                                        <div>
+                                            <h4>Simulacro Completo ICFES</h4>
+                                            <p>Todas las áreas, 4.5 horas</p>
+                                        </div>
+                                    </div>
 
-            <div class="extra-item">
-              <span>Dificultad</span>
+                                    <span class="recommended">
+                                        Recomendado
+                                    </span>
+                                </div>
+                            </label>
 
-              <select>
-                <option>Media</option>
-                <option>Fácil</option>
-                <option>Difícil</option>
-              </select>
-            </div>
+                            <!-- OPTION -->
+                            <label class="option">
+                                <div class="option__left">
+                                    <input type="radio" />
 
-            <div class="extra-item">
-              <span>Tiempo Extra</span>
+                                    <div>
+                                        <h4>Por Área Específica</h4>
+                                        <p>Selecciona una o más áreas</p>
+                                    </div>
+                                </div>
+                            </label>
 
-              <select>
-                <option>No</option>
-                <option>+15 min</option>
-                <option>+30 min</option>
-              </select>
-            </div>
+                            <!-- OPTION -->
+                            <label class="option">
+                                <div class="option__left">
+                                    <input type="radio" />
 
-          </div>
+                                    <div>
+                                        <h4>Mini Simulacro</h4>
+                                        <p>Mitad de preguntas, 2 horas</p>
+                                    </div>
+                                </div>
+                            </label>
 
+                            <!-- EXTRA -->
+                            <div class="extra-settings">
+                                <div class="extra-item">
+                                    <span>Dificultad</span>
+
+                                    <select>
+                                        <option>Media</option>
+                                        <option>Fácil</option>
+                                        <option>Difícil</option>
+                                    </select>
+                                </div>
+
+                                <div class="extra-item">
+                                    <span>Tiempo Extra</span>
+
+                                    <select>
+                                        <option>No</option>
+                                        <option>+15 min</option>
+                                        <option>+30 min</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="config-card">
+                            <div class="card-title">
+                                <i class="fas fa-file-lines"></i>
+                                <h3>Áreas a evaluar</h3>
+                            </div>
+
+                            <div class="subjects">
+                                <label class="subject">
+                                    <input type="checkbox" checked />
+                                    <span>Matemáticas</span>
+                                </label>
+
+                                <label class="subject">
+                                    <input type="checkbox" checked />
+                                    <span>Lectura Crítica</span>
+                                </label>
+
+                                <label class="subject">
+                                    <input type="checkbox" checked />
+                                    <span>Sociales y Ciudadanas</span>
+                                </label>
+
+                                <label class="subject">
+                                    <input type="checkbox" checked />
+                                    <span>Ciencias Naturales</span>
+                                </label>
+
+                                <label class="subject">
+                                    <input type="checkbox" checked />
+                                    <span>Inglés</span>
+                                </label>
+                            </div>
+
+                            <!-- INFO -->
+                            <div class="summary-box">
+                                <div class="summary-item">
+                                    <span>Preguntas estimadas</span>
+                                    <strong>278</strong>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span>Duración total</span>
+                                    <strong>4h 30m</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ACTIONS -->
+                    <section class="actions">
+                        <a
+                            class="btn btn--secondary"
+                            href="../dashboards/dashboard.html"
+                        >
+                            Cancelar
+                        </a>
+
+                        <a class="btn btn--primary" href="mock_exam.html">
+                            Iniciar Prueba
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </section>
+
+                    <!-- BOT -->
+                    <div class="assistant-box">
+                        <div class="assistant-message">
+                            ¡Sigue así! Estás haciendo un gran trabajo.
+                        </div>
+
+                        <div class="assistant-avatar">🤖</div>
+                    </div>
+                </div>
+            </main>
         </div>
-
-        <!-- RIGHT -->
-        <div class="config-card">
-
-          <div class="card-title">
-            <i class="fas fa-file-lines"></i>
-            <h3>Áreas a evaluar</h3>
-          </div>
-
-          <div class="subjects">
-
-            <label class="subject">
-              <input type="checkbox" checked>
-              <span>Matemáticas</span>
-            </label>
-
-            <label class="subject">
-              <input type="checkbox" checked>
-              <span>Lectura Crítica</span>
-            </label>
-
-            <label class="subject">
-              <input type="checkbox" checked>
-              <span>Sociales y Ciudadanas</span>
-            </label>
-
-            <label class="subject">
-              <input type="checkbox" checked>
-              <span>Ciencias Naturales</span>
-            </label>
-
-            <label class="subject">
-              <input type="checkbox" checked>
-              <span>Inglés</span>
-            </label>
-
-          </div>
-
-          <!-- INFO -->
-          <div class="summary-box">
-
-            <div class="summary-item">
-              <span>Preguntas estimadas</span>
-              <strong>278</strong>
-            </div>
-
-            <div class="summary-item">
-              <span>Duración total</span>
-              <strong>4h 30m</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- ACTIONS -->
-      <section class="actions">
-
-        <button class="btn btn--secondary">
-          Cancelar
-        </button>
-
-        <button class="btn btn--primary">
-          Iniciar Prueba
-          <i class="fas fa-play"></i>
-        </button>
-
-      </section>
-
-      <!-- BOT -->
-      <div class="assistant-box">
-
-        <div class="assistant-message">
-          ¡Sigue así! Estás haciendo un gran trabajo.
-        </div>
-
-        <div class="assistant-avatar">
-          🤖
-        </div>
-
-      </div>
-
-    </div>
-
-  </main>
-
-</div>
-
-</body>
+    </body>
 </html>

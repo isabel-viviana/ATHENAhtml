@@ -1,68 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATHENA | Plataforma</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, sans-serif;
-            background: #f8fafc;
-            color: #111827;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        main {
-            width: min(100%, 680px);
-            padding: 32px;
-            background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.08);
-        }
-        h1 {
-            margin: 0 0 14px;
-            font-size: 2rem;
-        }
-        p {
-            margin: 0 0 24px;
-            line-height: 1.65;
-            color: #475569;
-        }
-        .links {
-            display: grid;
-            gap: 12px;
-        }
-        .links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 18px;
-            border-radius: 999px;
-            text-decoration: none;
-            color: #ffffff;
-            background: #4f46e5;
-            font-weight: 600;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-        .links a:hover {
-            transform: translateY(-1px);
-            background: #4338ca;
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <h1>ATHENA</h1>
-        <p>Bienvenido a la plataforma. Elige una sección para navegar y verificar que todo funcione correctamente.</p>
-        <div class="links">
-            <a href="pages/dashboards/dashboard.html">Ir al Dashboard</a>
-            <a href="pages/authentications/login_student.html">Iniciar sesión</a>
-            <a href="pages/ai_tutor/chat.html">Tutor IA</a>
-            <a href="pages/statistics/statistics.html">Estadísticas</a>
-        </div>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Plataforma</title>
+        <link rel="stylesheet" href="./assets/css/theme.css" />
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Inter, system-ui, sans-serif;
+                background: #f8fafc;
+                color: #111827;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            main {
+                width: min(100%, 680px);
+                padding: 32px;
+                background: #ffffff;
+                border-radius: 24px;
+                box-shadow: 0 16px 48px rgba(15, 23, 42, 0.08);
+            }
+            h1 {
+                margin: 0 0 14px;
+                font-size: 2rem;
+            }
+            p {
+                margin: 0 0 24px;
+                line-height: 1.65;
+                color: #475569;
+            }
+            .links {
+                display: grid;
+                gap: 12px;
+            }
+            .links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 18px;
+                border-radius: 999px;
+                text-decoration: none;
+                color: #ffffff;
+                background: #4f46e5;
+                font-weight: 600;
+                transition:
+                    transform 0.2s ease,
+                    background 0.2s ease;
+            }
+            .links a:hover {
+                transform: translateY(-1px);
+                background: #4338ca;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>ATHENA</h1>
+            <p>
+                Bienvenido a la plataforma. Elige una sección para navegar y
+                verificar que todo funcione correctamente.
+            </p>
+            <div class="links">
+                <a href="pages/dashboards/dashboard.html">Ir al Dashboard</a>
+                <a href="pages/authentications/login_student.html"
+                    >Iniciar sesión</a
+                >
+                <a href="pages/ai_tutor/chat.html">Tutor IA</a>
+                <a href="pages/statistics/statistics.html">Estadísticas</a>
+            </div>
+        </main>
+    </body>
 </html>

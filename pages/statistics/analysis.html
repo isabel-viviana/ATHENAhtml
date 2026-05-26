@@ -1,139 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATHENA | Análisis Diagnóstico IA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="analysis.css">
-</head>
-<body>
-  <div class="layout">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Análisis Diagnóstico IA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="analysis.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
+                </div>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar__logo">
-        <i class="fas fa-brain"></i>
-        <span class="sidebar__brand">ATHENA</span>
-      </div>
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                    <a
+                        href="../mock_exams/mock_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
+                    <a
+                        href="../practices/practice_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
+                    <a href="../ai_tutor/chat.html" class="sidebar__link">
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
+                    <a href="statistics.html" class="sidebar__link">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
 
-                  <nav class="sidebar__nav">
-        <a href="../dashboards/dashboard.html" class="sidebar__link sidebar__link--active">
-            <i class="fas fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="../mock_exams/mock_config.html" class="sidebar__link">
-            <i class="fas fa-clipboard-check"></i>
-            <span>Simulacros</span>
-        </a>
-        <a href="../practices/practice_config.html" class="sidebar__link">
-            <i class="fas fa-dumbbell"></i>
-            <span>Prácticas</span>
-        </a>
-        <a href="../ai_tutor/chat.html" class="sidebar__link">
-            <i class="fas fa-robot"></i>
-            <span>Tutor IA</span>
-        </a>
-        <a href="statistics.html" class="sidebar__link">
-            <i class="fas fa-chart-pie"></i>
-            <span>Estadísticas</span>
-        </a>
-        <a href="../profiles/profile.html" class="sidebar__link">
-            <i class="fas fa-user-circle"></i>
-            <span>Perfil</span>
-        </a>
-        <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-            <i class="fas fa-bell"></i>
-            <span>Notificaciones</span>
-            <span class="sidebar__badge">3</span>
-        </a>
-      </nav>
-    </aside>
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="main">
+                <!-- CONTENIDO -->
+                <div class="main__content">
+                    <!-- TÍTULO -->
+                    <section class="section-header">
+                        <h2>Análisis Diagnóstico IA</h2>
+                    </section>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main">
+                    <!-- DIAGNÓSTICO -->
+                    <section class="card card--diagnostic">
+                        <div class="card__header">
+                            <div class="card__icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Diagnóstico ATHENA</h3>
+                        </div>
+                        <p>
+                            Basado en tus últimos 5 simulacros, tienes una
+                            excelente base en humanidades. Tu principal
+                            oportunidad de mejora está en
+                            <strong>Inglés (Tiempos verbales)</strong> y
+                            <strong>Matemáticas (Trigonometría).</strong> Si
+                            mejoras un 15% en estas áreas, tu puntaje global
+                            subirá aproximadamente 25 puntos.
+                        </p>
+                    </section>
 
-      <!-- CONTENIDO -->
-      <div class="main__content">
+                    <!-- TEMAS CRÍTICOS -->
+                    <section class="critical-topics">
+                        <h3 class="critical-topics__title">
+                            Temas Críticos <span>(Requieren atención)</span>
+                        </h3>
 
-        <!-- TÍTULO -->
-        <section class="section-header">
-          <h2 >Análisis Diagnóstico IA</h2>
-        </section>
+                        <div class="topic-card">
+                            <div class="topic-card__info">
+                                <h4>Pasado Perfecto</h4>
+                                <span>Inglés</span>
+                            </div>
+                            <div class="topic-card__stat">
+                                <span class="badge badge--red"
+                                    >75% de error</span
+                                >
+                            </div>
+                            <button type="button" class="topic-card__btn">
+                                Practicar esto
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
 
-        <!-- DIAGNÓSTICO -->
-        <section class="card card--diagnostic">
-          <div class="card__header">
-            <div class="card__icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3>Diagnóstico ATHENA</h3>
-          </div>
-          <p>
-            Basado en tus últimos 5 simulacros, tienes una excelente base en humanidades. 
-            Tu principal oportunidad de mejora está en 
-            <strong>Inglés (Tiempos verbales)</strong> y 
-            <strong>Matemáticas (Trigonometría).</strong> Si mejoras un 15% en estas áreas, 
-            tu puntaje global subirá aproximadamente 25 puntos.
-          </p>
-        </section>
+                        <div class="topic-card">
+                            <div class="topic-card__info">
+                                <h4>Funciones Trigonométricas</h4>
+                                <span>Matemáticas</span>
+                            </div>
+                            <div class="topic-card__stat">
+                                <span class="badge badge--yellow"
+                                    >60% de error</span
+                                >
+                            </div>
+                            <button type="button" class="topic-card__btn">
+                                Practicar esto
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
 
-        <!-- TEMAS CRÍTICOS -->
-        <section class="critical-topics">
-          <h3 class="critical-topics__title">
-            Temas Críticos <span>(Requieren atención)</span>
-          </h3>
+                        <div class="topic-card">
+                            <div class="topic-card__info">
+                                <h4>Leyes de Mendel</h4>
+                                <span>Ciencias</span>
+                            </div>
+                            <div class="topic-card__stat">
+                                <span class="badge badge--yellow"
+                                    >50% de error</span
+                                >
+                            </div>
+                            <button type="button" class="topic-card__btn">
+                                Practicar esto
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
 
-          <div class="topic-card">
-            <div class="topic-card__info">
-              <h4>Pasado Perfecto</h4>
-              <span>Inglés</span>
-            </div>
-            <div class="topic-card__stat">
-              <span class="badge badge--red">75% de error</span>
-            </div>
-            <button type="button" class="topic-card__btn">
-              Practicar esto <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-
-          <div class="topic-card">
-            <div class="topic-card__info">
-              <h4>Funciones Trigonométricas</h4>
-              <span>Matemáticas</span>
-            </div>
-            <div class="topic-card__stat">
-              <span class="badge badge--yellow">60% de error</span>
-            </div>
-            <button type="button" class="topic-card__btn">
-              Practicar esto <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-
-          <div class="topic-card">
-            <div class="topic-card__info">
-              <h4>Leyes de Mendel</h4>
-              <span>Ciencias</span>
-            </div>
-            <div class="topic-card__stat">
-              <span class="badge badge--yellow">50% de error</span>
-            </div>
-            <button type="button" class="topic-card__btn">
-              Practicar esto <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- MENSAJE MOTIVACIONAL -->
-        <div class="motivation">
-          <p>¡Sigue así! Estás haciendo un gran trabajo.</p>
+                    <!-- MENSAJE MOTIVACIONAL -->
+                    <div class="motivation">
+                        <p>¡Sigue así! Estás haciendo un gran trabajo.</p>
+                    </div>
+                </div>
+            </main>
         </div>
-
-      </div>
-    </main>
-  </div>
-</body>
+    </body>
 </html>

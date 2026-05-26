@@ -1,455 +1,405 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ATHENA | Detalle de Respuestas</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Detalle de Respuestas</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
 
-  <link rel="stylesheet" href="practice_review.css">
-</head>
-<body>
+        <link rel="stylesheet" href="practice_review.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
+                </div>
 
-<div class="layout">
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
 
-  <!-- SIDEBAR -->
-<aside class="sidebar">
+                    <a
+                        href="../mock_exams/mock_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
 
-  <div class="sidebar__logo">
-    <i class="fas fa-brain"></i>
-    <span class="sidebar__brand">ATHENA</span>
-  </div>
+                    <a href="practice_config.html" class="sidebar__link">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
 
-  <nav class="sidebar__nav">
+                    <a href="../ai_tutor/chat.html" class="sidebar__link">
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
 
-    <a href="../dashboards/dashboard.html" class="sidebar__link">
-      <i class="fas fa-home"></i>
-      <span>Inicio</span>
-    </a>
+                    <a
+                        href="../statistics/statistics.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
 
-    <a href="../mock_exams/mock_config.html" class="sidebar__link">
-      <i class="fas fa-clipboard-check"></i>
-      <span>Simulacros</span>
-    </a>
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
 
-    <a href="practice_config.html" class="sidebar__link">
-      <i class="fas fa-dumbbell"></i>
-      <span>Prácticas</span>
-    </a>
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
 
-    <a href="../ai_tutor/chat.html" class="sidebar__link">
-      <i class="fas fa-robot"></i>
-      <span>Tutor IA</span>
-    </a>
+            <!-- MAIN -->
+            <main class="main">
+                <!-- HEADER -->
+                <section class="page-header">
+                    <div class="page-header__content">
+                        <span class="page-header__breadcrumb">
+                            <i class="fas fa-arrow-left"></i>
+                            Volver a resultados
+                        </span>
 
-    <a href="../statistics/statistics.html" class="sidebar__link sidebar__link--active">
-      <i class="fas fa-chart-pie"></i>
-      <span>Estadísticas</span>
-    </a>
+                        <h1>Detalle de Respuestas</h1>
 
-    <a href="../profiles/profile.html" class="sidebar__link">
-      <i class="fas fa-user-circle"></i>
-      <span>Perfil</span>
-    </a>
+                        <p>
+                            Revisa tu rendimiento pregunta por pregunta y
+                            detecta en qué áreas puedes mejorar.
+                        </p>
+                    </div>
 
-    <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-      <i class="fas fa-bell"></i>
-      <span>Notificaciones</span>
-      <span class="sidebar__badge">3</span>
-    </a>
+                    <div class="page-header__stats">
+                        <div class="header-mini-card">
+                            <span>Aciertos</span>
+                            <strong>7</strong>
+                        </div>
 
-  </nav>
+                        <div class="header-mini-card header-mini-card--danger">
+                            <span>Errores</span>
+                            <strong>3</strong>
+                        </div>
 
-  </aside>
+                        <div class="header-mini-card">
+                            <span>Precisión</span>
+                            <strong>70%</strong>
+                        </div>
+                    </div>
+                </section>
 
-  <!-- MAIN -->
-  <main class="main">
+                <!-- FILTERS -->
+                <section class="filters">
+                    <button class="filter-btn filter-btn--active">Todas</button>
 
-    <!-- HEADER -->
-    <section class="page-header">
+                    <button class="filter-btn">Correctas</button>
 
-      <div class="page-header__content">
-        <span class="page-header__breadcrumb">
-          <i class="fas fa-arrow-left"></i>
-          Volver a resultados
-        </span>
+                    <button class="filter-btn">Incorrectas</button>
 
-        <h1>Detalle de Respuestas</h1>
+                    <button class="filter-btn">Matemáticas</button>
 
-        <p>
-          Revisa tu rendimiento pregunta por pregunta y detecta
-          en qué áreas puedes mejorar.
-        </p>
-      </div>
+                    <button class="filter-btn">Lectura</button>
+                </section>
 
-      <div class="page-header__stats">
+                <!-- QUESTIONS -->
+                <section class="questions">
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--correct">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--correct">
+                                <i class="fas fa-check"></i>
+                            </div>
 
-        <div class="header-mini-card">
-          <span>Aciertos</span>
-          <strong>7</strong>
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        MATEMÁTICAS · PREGUNTA 1
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--easy"
+                                    >
+                                        Fácil
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Un agricultor tiene 24 hectáreas y decide
+                                    dividirlas en partes iguales...
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        1m 20s
+                                    </span>
+
+                                    <span>
+                                        <i class="fas fa-bolt"></i>
+                                        Respuesta rápida
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--wrong">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--wrong">
+                                <i class="fas fa-xmark"></i>
+                            </div>
+
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        MATEMÁTICAS · PREGUNTA 2
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--medium"
+                                    >
+                                        Media
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Si f(x) = 2x² − 4x + 1, determine el valor
+                                    de f(3)...
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        2m 45s
+                                    </span>
+
+                                    <span>
+                                        <i
+                                            class="fas fa-triangle-exclamation"
+                                        ></i>
+                                        Error conceptual
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--wrong">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--wrong">
+                                <i class="fas fa-xmark"></i>
+                            </div>
+
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        LECTURA · PREGUNTA 3
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--hard"
+                                    >
+                                        Difícil
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Según el texto, el autor considera que la
+                                    tecnología...
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        45s
+                                    </span>
+
+                                    <span>
+                                        <i class="fas fa-book-open"></i>
+                                        Interpretación textual
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--correct">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--correct">
+                                <i class="fas fa-check"></i>
+                            </div>
+
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        CIENCIAS · PREGUNTA 4
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--easy"
+                                    >
+                                        Fácil
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    ¿Cuál es la principal función de la
+                                    mitocondria?
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        38s
+                                    </span>
+
+                                    <span>
+                                        <i class="fas fa-star"></i>
+                                        Excelente precisión
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--correct">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--correct">
+                                <i class="fas fa-check"></i>
+                            </div>
+
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        INGLÉS · PREGUNTA 5
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--medium"
+                                    >
+                                        Media
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Choose the correct option to complete the
+                                    sentence...
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        1m 05s
+                                    </span>
+
+                                    <span>
+                                        <i class="fas fa-language"></i>
+                                        Gramática
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+
+                    <!-- QUESTION -->
+                    <article class="question-card question-card--wrong">
+                        <div class="question-card__left">
+                            <div class="question-icon question-icon--wrong">
+                                <i class="fas fa-xmark"></i>
+                            </div>
+
+                            <div class="question-info">
+                                <div class="question-top">
+                                    <span class="question-category">
+                                        SOCIALES · PREGUNTA 6
+                                    </span>
+
+                                    <span
+                                        class="question-difficulty difficulty--medium"
+                                    >
+                                        Media
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    La Constitución de 1991 se caracteriza
+                                    principalmente por...
+                                </h3>
+
+                                <div class="question-meta">
+                                    <span>
+                                        <i class="fas fa-clock"></i>
+                                        3m 12s
+                                    </span>
+
+                                    <span>
+                                        <i class="fas fa-chart-line"></i>
+                                        Tiempo elevado
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button class="btn-outline">Ver Explicación</button>
+                        </div>
+                    </article>
+                </section>
+            </main>
         </div>
-
-        <div class="header-mini-card header-mini-card--danger">
-          <span>Errores</span>
-          <strong>3</strong>
-        </div>
-
-        <div class="header-mini-card">
-          <span>Precisión</span>
-          <strong>70%</strong>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- FILTERS -->
-    <section class="filters">
-
-      <button class="filter-btn filter-btn--active">
-        Todas
-      </button>
-
-      <button class="filter-btn">
-        Correctas
-      </button>
-
-      <button class="filter-btn">
-        Incorrectas
-      </button>
-
-      <button class="filter-btn">
-        Matemáticas
-      </button>
-
-      <button class="filter-btn">
-        Lectura
-      </button>
-
-    </section>
-
-    <!-- QUESTIONS -->
-    <section class="questions">
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--correct">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--correct">
-            <i class="fas fa-check"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                MATEMÁTICAS · PREGUNTA 1
-              </span>
-
-              <span class="question-difficulty difficulty--easy">
-                Fácil
-              </span>
-            </div>
-
-            <h3>
-              Un agricultor tiene 24 hectáreas y decide dividirlas
-              en partes iguales...
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                1m 20s
-              </span>
-
-              <span>
-                <i class="fas fa-bolt"></i>
-                Respuesta rápida
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--wrong">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--wrong">
-            <i class="fas fa-xmark"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                MATEMÁTICAS · PREGUNTA 2
-              </span>
-
-              <span class="question-difficulty difficulty--medium">
-                Media
-              </span>
-            </div>
-
-            <h3>
-              Si f(x) = 2x² − 4x + 1, determine el valor de f(3)...
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                2m 45s
-              </span>
-
-              <span>
-                <i class="fas fa-triangle-exclamation"></i>
-                Error conceptual
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--wrong">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--wrong">
-            <i class="fas fa-xmark"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                LECTURA · PREGUNTA 3
-              </span>
-
-              <span class="question-difficulty difficulty--hard">
-                Difícil
-              </span>
-            </div>
-
-            <h3>
-              Según el texto, el autor considera que la tecnología...
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                45s
-              </span>
-
-              <span>
-                <i class="fas fa-book-open"></i>
-                Interpretación textual
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--correct">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--correct">
-            <i class="fas fa-check"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                CIENCIAS · PREGUNTA 4
-              </span>
-
-              <span class="question-difficulty difficulty--easy">
-                Fácil
-              </span>
-            </div>
-
-            <h3>
-              ¿Cuál es la principal función de la mitocondria?
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                38s
-              </span>
-
-              <span>
-                <i class="fas fa-star"></i>
-                Excelente precisión
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--correct">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--correct">
-            <i class="fas fa-check"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                INGLÉS · PREGUNTA 5
-              </span>
-
-              <span class="question-difficulty difficulty--medium">
-                Media
-              </span>
-            </div>
-
-            <h3>
-              Choose the correct option to complete the sentence...
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                1m 05s
-              </span>
-
-              <span>
-                <i class="fas fa-language"></i>
-                Gramática
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-      <!-- QUESTION -->
-      <article class="question-card question-card--wrong">
-
-        <div class="question-card__left">
-
-          <div class="question-icon question-icon--wrong">
-            <i class="fas fa-xmark"></i>
-          </div>
-
-          <div class="question-info">
-
-            <div class="question-top">
-              <span class="question-category">
-                SOCIALES · PREGUNTA 6
-              </span>
-
-              <span class="question-difficulty difficulty--medium">
-                Media
-              </span>
-            </div>
-
-            <h3>
-              La Constitución de 1991 se caracteriza principalmente por...
-            </h3>
-
-            <div class="question-meta">
-              <span>
-                <i class="fas fa-clock"></i>
-                3m 12s
-              </span>
-
-              <span>
-                <i class="fas fa-chart-line"></i>
-                Tiempo elevado
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="question-actions">
-
-          <button class="btn-outline">
-            Ver Explicación
-          </button>
-
-        </div>
-
-      </article>
-
-    </section>
-
-  </main>
-
-</div>
-
-</body>
+    </body>
 </html>

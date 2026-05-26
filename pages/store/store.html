@@ -1,282 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATHENA | Tienda</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ATHENA | Tienda</title>
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
 
-  <link rel="stylesheet" href="store.css">
-</head>
+        <link rel="stylesheet" href="store.css" />
+        <link rel="stylesheet" href="../../assets/css/theme.css" />
+    </head>
 
-<body>
+    <body>
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="sidebar__brand">ATHENA</span>
+                </div>
 
-<div class="layout">
+                <nav class="sidebar__nav">
+                    <a
+                        href="../dashboards/dashboard.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+                    <a
+                        href="../mock_exams/mock_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Simulacros</span>
+                    </a>
 
-    <div class="sidebar__logo">
-      <i class="fas fa-brain"></i>
-      <span class="sidebar__brand">ATHENA</span>
-    </div>
+                    <a
+                        href="../practices/practice_config.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Prácticas</span>
+                    </a>
 
-    <nav class="sidebar__nav">
+                    <a href="../ai_tutor/chat.html" class="sidebar__link">
+                        <i class="fas fa-robot"></i>
+                        <span>Tutor IA</span>
+                    </a>
 
-      <a href="../dashboards/dashboard.html" class="sidebar__link">
-        <i class="fas fa-home"></i>
-        <span>Inicio</span>
-      </a>
+                    <a
+                        href="../statistics/statistics.html"
+                        class="sidebar__link"
+                    >
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Estadísticas</span>
+                    </a>
 
-      <a href="../mock_exams/mock_config.html" class="sidebar__link">
-        <i class="fas fa-clipboard-check"></i>
-        <span>Simulacros</span>
-      </a>
+                    <a
+                        href="store.html"
+                        class="sidebar__link sidebar__link--active"
+                    >
+                        <i class="fas fa-store"></i>
+                        <span>Tienda</span>
+                    </a>
 
-      <a href="../practices/practice_config.html" class="sidebar__link">
-        <i class="fas fa-dumbbell"></i>
-        <span>Prácticas</span>
-      </a>
+                    <a href="../profiles/profile.html" class="sidebar__link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a>
 
-      <a href="../ai_tutor/chat.html" class="sidebar__link">
-        <i class="fas fa-robot"></i>
-        <span>Tutor IA</span>
-      </a>
+                    <a
+                        href="../profiles/profile_notifications.html"
+                        class="sidebar__link sidebar__link--notifications"
+                    >
+                        <i class="fas fa-bell"></i>
+                        <span>Notificaciones</span>
 
-      <a href="../statistics/statistics.html" class="sidebar__link">
-        <i class="fas fa-chart-pie"></i>
-        <span>Estadísticas</span>
-      </a>
+                        <span class="sidebar__badge">3</span>
+                    </a>
+                </nav>
+            </aside>
 
-      <a href="store.html" class="sidebar__link sidebar__link--active">
-        <i class="fas fa-store"></i>
-        <span>Tienda</span>
-      </a>
+            <!-- MAIN -->
+            <main class="main">
+                <div class="main__content">
+                    <!-- HEADER -->
+                    <section class="store-header">
+                        <div class="store-header__left">
+                            <div class="store-header__icon">
+                                <i class="fas fa-store"></i>
+                            </div>
 
-      <a href="../profiles/profile.html" class="sidebar__link">
-        <i class="fas fa-user-circle"></i>
-        <span>Perfil</span>
-      </a>
+                            <div>
+                                <h1>Tienda ATHENA</h1>
+                                <p>
+                                    Canjea tus monedas por recompensas y
+                                    personalizaciones.
+                                </p>
+                            </div>
+                        </div>
 
-      <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-        <i class="fas fa-bell"></i>
-        <span>Notificaciones</span>
+                        <div class="coins">
+                            <i class="fas fa-star"></i>
+                            <span>1,250</span>
+                        </div>
+                    </section>
 
-        <span class="sidebar__badge">3</span>
-      </a>
+                    <!-- SECTION -->
+                    <section class="shop-section">
+                        <div class="section-title">
+                            <h2>Avatares y Personalización</h2>
+                            <span>12 artículos</span>
+                        </div>
 
-    </nav>
+                        <div class="products-grid">
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-blue">
+                                    <i class="fas fa-hat-wizard"></i>
+                                </div>
 
-  </aside>
+                                <h3>Avatar Búho Mágico</h3>
 
-  <!-- MAIN -->
-  <main class="main">
+                                <p>Diseño exclusivo ATHENA</p>
 
-    <div class="main__content">
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    500
+                                </button>
+                            </div>
 
-      <!-- HEADER -->
-      <section class="store-header">
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-purple">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
 
-        <div class="store-header__left">
-          <div class="store-header__icon">
-            <i class="fas fa-store"></i>
-          </div>
+                                <h3>Avatar Galáctico</h3>
 
-          <div>
-            <h1>Tienda ATHENA</h1>
-            <p>Canjea tus monedas por recompensas y personalizaciones.</p>
-          </div>
+                                <p>Estilo espacial premium</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    650
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-green">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+
+                                <h3>Tema Naturaleza</h3>
+
+                                <p>Colores verdes relajantes</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    300
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-yellow">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+
+                                <h3>Marco Legendario</h3>
+
+                                <p>Marco dorado brillante</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    800
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-red">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+
+                                <h3>Efecto Fuego</h3>
+
+                                <p>Animación especial de perfil</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    720
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-cyan">
+                                    <i class="fas fa-water"></i>
+                                </div>
+
+                                <h3>Tema Océano</h3>
+
+                                <p>Interfaz azul dinámica</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    450
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-pink">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+
+                                <h3>Pack Rosa Neon</h3>
+
+                                <p>Estilo moderno y brillante</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    520
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT -->
+                            <div class="product-card">
+                                <div class="product-card__avatar avatar-orange">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+
+                                <h3>Efecto Energía</h3>
+
+                                <p>Rayos animados para perfil</p>
+
+                                <button class="buy-btn">
+                                    <i class="fas fa-star"></i>
+                                    600
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- INVENTORY BUTTON -->
+                    <div class="inventory">
+                        <button type="button" class="inventory-btn">
+                            <i class="fas fa-box-open"></i>
+                            Ver mi inventario
+                        </button>
+                    </div>
+                </div>
+            </main>
         </div>
-
-        <div class="coins">
-          <i class="fas fa-star"></i>
-          <span>1,250</span>
-        </div>
-
-      </section>
-
-      <!-- SECTION -->
-      <section class="shop-section">
-
-        <div class="section-title">
-          <h2>Avatares y Personalización</h2>
-          <span>12 artículos</span>
-        </div>
-
-        <div class="products-grid">
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-blue">
-              <i class="fas fa-hat-wizard"></i>
-            </div>
-
-            <h3>Avatar Búho Mágico</h3>
-
-            <p>Diseño exclusivo ATHENA</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              500
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-purple">
-              <i class="fas fa-user-astronaut"></i>
-            </div>
-
-            <h3>Avatar Galáctico</h3>
-
-            <p>Estilo espacial premium</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              650
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-green">
-              <i class="fas fa-leaf"></i>
-            </div>
-
-            <h3>Tema Naturaleza</h3>
-
-            <p>Colores verdes relajantes</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              300
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-yellow">
-              <i class="fas fa-crown"></i>
-            </div>
-
-            <h3>Marco Legendario</h3>
-
-            <p>Marco dorado brillante</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              800
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-red">
-              <i class="fas fa-fire"></i>
-            </div>
-
-            <h3>Efecto Fuego</h3>
-
-            <p>Animación especial de perfil</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              720
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-cyan">
-              <i class="fas fa-water"></i>
-            </div>
-
-            <h3>Tema Océano</h3>
-
-            <p>Interfaz azul dinámica</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              450
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-pink">
-              <i class="fas fa-heart"></i>
-            </div>
-
-            <h3>Pack Rosa Neon</h3>
-
-            <p>Estilo moderno y brillante</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              520
-            </button>
-
-          </div>
-
-          <!-- PRODUCT -->
-          <div class="product-card">
-
-            <div class="product-card__avatar avatar-orange">
-              <i class="fas fa-bolt"></i>
-            </div>
-
-            <h3>Efecto Energía</h3>
-
-            <p>Rayos animados para perfil</p>
-
-            <button class="buy-btn">
-              <i class="fas fa-star"></i>
-              600
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- INVENTORY BUTTON -->
-      <div class="inventory">
-
-        <button type="button" class="inventory-btn">
-          <i class="fas fa-box-open"></i>
-          Ver mi inventario
-        </button>
-
-      </div>
-
-    </div>
-
-  </main>
-
-</div>
-
-</body>
+    </body>
 </html>

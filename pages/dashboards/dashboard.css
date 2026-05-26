@@ -380,7 +380,7 @@ body {
 .ai-button {
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    bottom: 5px;
     background: #2b6cb0;
     width: 40px;
     height: 40px;
@@ -390,6 +390,12 @@ body {
     justify-content: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     cursor: pointer;
+}
+
+.ai-button img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .view-all {

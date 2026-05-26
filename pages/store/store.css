@@ -422,7 +422,8 @@ body{
   margin-top:34px;
 }
 
-.inventory a{
+.inventory a,
+.inventory button{
   display:flex;
   align-items:center;
   gap:10px;
@@ -433,10 +434,14 @@ body{
 
   font-weight:600;
 
+  background:transparent;
+  border:none;
+  cursor:pointer;
   transition:0.2s ease;
 }
 
-.inventory a:hover{
+.inventory a:hover,
+.inventory button:hover{
   opacity:0.8;
 }
 

@@ -729,9 +729,14 @@ body{
   color:var(--text-muted);
 }
 
-.footer-help a{
+.footer-help a,
+.footer-help button{
   color:#60A5FA;
   text-decoration:none;
+  background:transparent;
+  border:none;
+  font:inherit;
+  cursor:pointer;
 }
 
 /* ==========================================

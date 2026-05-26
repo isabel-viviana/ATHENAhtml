@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/pages/statistics/analysis.css">
+  <link rel="stylesheet" href="analysis.css">
 </head>
 <body>
   <div class="layout">
@@ -20,34 +20,35 @@
         <span class="sidebar__brand">ATHENA</span>
       </div>
 
-      <nav class="sidebar__nav">
-        <a href="/pages/dashboards/dashboard.html" class="sidebar__link sidebar__link--active">
-          <i class="fas fa-home"></i>
-          <span>Inicio</span>
+                  <nav class="sidebar__nav">
+        <a href="../dashboards/dashboard.html" class="sidebar__link sidebar__link--active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
         </a>
-        <a href="/pages/mock_exams/mock_config.html" class="sidebar__link">
-          <i class="fas fa-clipboard-check"></i>
-          <span>Simulacros</span>
+        <a href="../mock_exams/mock_config.html" class="sidebar__link">
+            <i class="fas fa-clipboard-check"></i>
+            <span>Simulacros</span>
         </a>
-        <a href="/pages/practices/practice_config.html" class="sidebar__link">
-          <i class="fas fa-dumbbell"></i>
-          <span>Prácticas</span>
+        <a href="../practices/practice_config.html" class="sidebar__link">
+            <i class="fas fa-dumbbell"></i>
+            <span>Prácticas</span>
         </a>
-        <a href="/pages/ai_tutor/chat.html" class="sidebar__link">
-          <i class="fas fa-robot"></i>
-          <span>Tutor IA</span>
+        <a href="../ai_tutor/chat.html" class="sidebar__link">
+            <i class="fas fa-robot"></i>
+            <span>Tutor IA</span>
         </a>
-        <a href="/pages/statistics/statistics.html" class="sidebar__link">
-          <i class="fas fa-chart-pie"></i>
-          <span>Estadísticas</span>
+        <a href="statistics.html" class="sidebar__link">
+            <i class="fas fa-chart-pie"></i>
+            <span>Estadísticas</span>
         </a>
-        <a href="/pages/profiles/profile.html" class="sidebar__link">
-          <i class="fas fa-user-circle"></i>
-          <span>Perfil</span>
+        <a href="../profiles/profile.html" class="sidebar__link">
+            <i class="fas fa-user-circle"></i>
+            <span>Perfil</span>
         </a>
-        <a href="/pages/profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-          <i class="fas fa-bell"></i>
-          <span>Notificaciones</span>
+        <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
+            <i class="fas fa-bell"></i>
+            <span>Notificaciones</span>
+            <span class="sidebar__badge">3</span>
         </a>
       </nav>
     </aside>
@@ -94,9 +95,9 @@
             <div class="topic-card__stat">
               <span class="badge badge--red">75% de error</span>
             </div>
-            <a href="#" class="topic-card__btn">
+            <button type="button" class="topic-card__btn">
               Practicar esto <i class="fas fa-arrow-right"></i>
-            </a>
+            </button>
           </div>
 
           <div class="topic-card">
@@ -107,9 +108,9 @@
             <div class="topic-card__stat">
               <span class="badge badge--yellow">60% de error</span>
             </div>
-            <a href="#" class="topic-card__btn">
+            <button type="button" class="topic-card__btn">
               Practicar esto <i class="fas fa-arrow-right"></i>
-            </a>
+            </button>
           </div>
 
           <div class="topic-card">
@@ -120,9 +121,9 @@
             <div class="topic-card__stat">
               <span class="badge badge--yellow">50% de error</span>
             </div>
-            <a href="#" class="topic-card__btn">
+            <button type="button" class="topic-card__btn">
               Practicar esto <i class="fas fa-arrow-right"></i>
-            </a>
+            </button>
           </div>
         </section>
 

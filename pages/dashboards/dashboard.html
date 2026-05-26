@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athena Dashboard</title>
 
-    <link rel="stylesheet" href="/pages/dashboards/dashboard.css">
+    <link rel="stylesheet" href="dashboard.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,45 +23,37 @@
             <span class="sidebar__brand">ATHENA</span>
         </div>
 
-        <nav class="sidebar__nav">
-
-            <a href="/pages/dashboards/dashboard.html" class="sidebar__link sidebar__link--active">
-                <i class="fas fa-home"></i>
-                <span>Inicio</span>
-            </a>
-
-            <a href="/pages/mock_exams/mock_config.html" class="sidebar__link">
-                <i class="fas fa-clipboard-check"></i>
-                <span>Simulacros</span>
-            </a>
-
-            <a href="/pages/practices/practice_config.html" class="sidebar__link">
-                <i class="fas fa-dumbbell"></i>
-                <span>Prácticas</span>
-            </a>
-
-            <a href="/pages/ai_tutor/chat.html" class="sidebar__link">
-                <i class="fas fa-robot"></i>
-                <span>Tutor IA</span>
-            </a>
-
-            <a href="/pages/statistics/statistics.html" class="sidebar__link">
-                <i class="fas fa-chart-pie"></i>
-                <span>Estadísticas</span>
-            </a>
-
-            <a href="/pages/profiles/profile.html" class="sidebar__link">
-                <i class="fas fa-user-circle"></i>
-                <span>Perfil</span>
-            </a>
-
-            <a href="/pages/profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
-                <i class="fas fa-bell"></i>
-                <span>Notificaciones</span>
-                <span class="sidebar__badge">3</span>
-            </a>
-
-        </nav>
+                    <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__link sidebar__link--active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="../mock_exams/mock_config.html" class="sidebar__link">
+            <i class="fas fa-clipboard-check"></i>
+            <span>Simulacros</span>
+        </a>
+        <a href="../practices/practice_config.html" class="sidebar__link">
+            <i class="fas fa-dumbbell"></i>
+            <span>Prácticas</span>
+        </a>
+        <a href="../ai_tutor/chat.html" class="sidebar__link">
+            <i class="fas fa-robot"></i>
+            <span>Tutor IA</span>
+        </a>
+        <a href="../statistics/statistics.html" class="sidebar__link">
+            <i class="fas fa-chart-pie"></i>
+            <span>Estadísticas</span>
+        </a>
+        <a href="../profiles/profile.html" class="sidebar__link">
+            <i class="fas fa-user-circle"></i>
+            <span>Perfil</span>
+        </a>
+        <a href="../profiles/profile_notifications.html" class="sidebar__link sidebar__link--notifications">
+            <i class="fas fa-bell"></i>
+            <span>Notificaciones</span>
+            <span class="sidebar__badge">3</span>
+        </a>
+      </nav>
 
     </aside>
 
@@ -192,10 +184,10 @@
                         Actividad Reciente
                     </h3>
 
-                    <a href="#" class="view-all">
+                    <button type="button" class="view-all">
                         Ver todas
                         <i class="fas fa-chevron-right"></i>
-                    </a>
+                    </button>
 
                 </div>
 
@@ -252,10 +244,10 @@
                         Desafíos Semanales
                     </h3>
 
-                    <a href="#" class="view-all">
+                    <button type="button" class="view-all">
                         Ver todos
                         <i class="fas fa-chevron-right"></i>
-                    </a>
+                    </button>
 
                 </div>
 

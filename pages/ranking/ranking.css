@@ -1,0 +1,337 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --bg-main: #060b18;
+  --bg-card: rgba(7, 12, 24, 0.95);
+  --bg-card-2: rgba(10, 17, 40, 0.95);
+
+  --text-main: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-dim: #94a3b8;
+
+  --border: rgba(99, 102, 241, 0.16);
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* PAGE */
+.ranking-page {
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* BACKGROUND GLOW */
+.ranking-page::before,
+.ranking-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ranking-page::before {
+  width: 280px;
+  height: 280px;
+  top: -80px;
+  right: -80px;
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.ranking-page::after {
+  width: 340px;
+  height: 340px;
+  bottom: -100px;
+  left: -100px;
+  background: rgba(99, 102, 241, 0.14);
+}
+
+/* HEADER */
+.page-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 32px;
+}
+
+.page-header__info h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-header__info p {
+  max-width: 650px;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+/* CARDS GRID */
+.ranking-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.ranking-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.ranking-card:hover {
+  transform: translateY(-5px);
+}
+
+.ranking-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(168,85,247,0.12), transparent 24%);
+}
+
+.ranking-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.ranking-card__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ranking-card__value {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 14px 0;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ranking-card__meta {
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* MAIN GRID */
+.ranking-table-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 24px;
+}
+
+/* PANELS */
+.table-card,
+.national-card,
+.top-department {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.table-card::after,
+.national-card::after,
+.top-department::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(59,130,246,0.14), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(168,85,247,0.08), transparent 22%);
+}
+
+.table-card > *,
+.national-card > *,
+.top-department > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLES */
+.table-card h3,
+.national-card__title {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.table-card p,
+.national-card__subtitle,
+.top-department__meta {
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+/* TABLE */
+.table-card {
+  overflow-x: auto;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.table-card th,
+.table-card td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.table-card th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+.table-card td {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.table-card tbody tr {
+  transition: 0.2s ease;
+}
+
+.table-card tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.table-card tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rank-number {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.department-name {
+  font-weight: 600;
+  color: white;
+}
+
+/* SCORE CHIP */
+.score-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.16);
+  border: 1px solid rgba(99,102,241,0.24);
+  color: #a5b4fc;
+  font-weight: 700;
+  min-width: 70px;
+}
+
+/* RIGHT PANEL */
+.national-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.national-card__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.national-card__number {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+/* TOP DEPARTMENT */
+.top-department {
+  background: linear-gradient(
+    135deg,
+    rgba(99,102,241,0.16),
+    rgba(79,70,229,0.08)
+  );
+}
+
+.top-department__rank {
+  color: #818cf8;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.top-department__name {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  body {
+    padding: 20px;
+  }
+
+  .ranking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-table-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-header__info h1 {
+    font-size: 2rem;
+  }
+
+  .ranking-card__value {
+    font-size: 2.3rem;
+  }
+
+  .table-card th,
+  .table-card td {
+    padding: 10px;
+  }
+}

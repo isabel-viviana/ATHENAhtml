@@ -6,11 +6,14 @@
 }
 
 body {
-    background-color: #050a18;
+
+    background: radial-gradient(circle at center, #1a3a8a 0%, #050a18 80%);
+    display: flex;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .main-container {
@@ -31,6 +34,8 @@ body {
 }
 
 .logo-top {
+    width:10px;
+    height:10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -54,19 +59,17 @@ body {
 .mascot-container {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .mascot {
-    max-width: 300px;
+    max-width: 600px;
 }
 
 /* --- Panel Derecho --- */
 .right-panel {
     flex: 1;
     background-color: #0a1128;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
@@ -124,7 +127,7 @@ h2 {
 /* Divisor */
 .divider {
     text-align: center;
-    margin: 25px 0;
+    margin: 2px 2px;
     position: relative;
 }
 
@@ -181,11 +184,11 @@ h2 {
 
 /* Sección del Pie de Página */
 .footer-section {
-    margin-top: 40px;
+    margin-top: 2px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2px;
 }
 
 .terms-text {

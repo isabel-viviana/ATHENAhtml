@@ -76,8 +76,8 @@ body {
 }
 
 .form-container {
-    width: 100%;
-    max-width: 420px;
+    width: 10000%;
+    max-width: 4000px;
     padding: 20px;
     display: flex;
     flex-direction: column;

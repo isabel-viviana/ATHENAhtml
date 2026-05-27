@@ -241,7 +241,9 @@ body {
     overflow: hidden;
 }
 
-/* CARD */
+/* CARD (fila del historial)
+   nota: el hover/transition es intencional para que el boton “ver” se sienta parte del mismo bloque.
+   en mobile se convierte en columna para no romper la lectura del score + acciones. */
 .history-card {
     display: flex;
     align-items: center;

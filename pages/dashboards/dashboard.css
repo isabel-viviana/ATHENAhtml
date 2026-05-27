@@ -1,4 +1,7 @@
 :root {
+    /* tokens base del dashboard:
+       - colores globales
+       - valores “de diseño” (radiuses/ancho sidebar) usados mas abajo */
     --bg-dark: #050a18;
     --bg-card: #0a1128;
     --primary-blue: #1a3a8a;
@@ -9,10 +12,20 @@
     --sidebar-width: 240px;
 }
 
-/* =========================
-   RESET
-========================= */
-
+/* variables de tema: se repiten en el repo (el segundo :root).
+   no lo tocamos porque suele venir de un merge anterior para evitar que
+   algunos ids/clases dependan de un set especifico de tokens */
+:root {
+    --bg-dark: #050a18;
+    --bg-card: #0a1128;
+    --primary-blue: #1a3a8a;
+    --accent-yellow: #f6ad55;
+    --text-main: #ffffff;
+    --text-dim: #a0aec0;
+    --green-success: #48bb78;
+    --sidebar-width: 240px;
+}
+/* reset basico: evitar estilos por defecto y usar una fuente consistente */
 * {
     margin: 0;
     padding: 0;
@@ -20,29 +33,23 @@
     font-family: "Inter", sans-serif, system-ui;
 }
 
-/* =========================
-   BODY
-========================= */
-
+/* body y scroll:
+   body usa overflow:hidden para que no aparezcan scrollbars dobles.
+   el scroll real vive en .main-content (overflow-y:auto) */
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     overflow: hidden;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
+/* layout principal: contenedor flex que aloja sidebar + contenido */
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
-
+/* sidebar: ancho fijo y sin colapsar en pantallas pequenas (flex-shrink:0)
+   nota: el ancho que se usa en el markup es 250px, mantener coherencia */
 .sidebar {
     width: 250px;
     background-color: var(--bg-dark);
@@ -53,6 +60,7 @@ body {
     flex-shrink: 0;
 }
 
+/* logo del sidebar: alineacion entre icono y marca */
 .sidebar__logo {
     display: flex;
     align-items: center;
@@ -77,6 +85,7 @@ body {
     gap: 4px;
 }
 
+/* links del sidebar: estilos de interaccion y estado activo */
 .sidebar__link {
     display: flex;
     align-items: center;
@@ -106,6 +115,7 @@ body {
     font-weight: 600;
 }
 
+/* separador para el bloque de notificaciones dentro del menu */
 .sidebar__link--notifications {
     margin-top: 20px;
     border-top: 1px solid #1a2238;
@@ -123,10 +133,8 @@ body {
     border-radius: 999px;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-
+/* main-content: el area que hace scroll (importante cuando body tiene overflow:hidden)
+   min-width:0 evita que elementos largos rompan el layout flex */
 .main-content {
     flex: 1;
     padding: 30px 40px;
@@ -134,10 +142,7 @@ body {
     min-width: 0;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* header: saludo y controles, alineados al inicio para que el texto quede arriba */
 .header {
     display: flex;
     justify-content: space-between;
@@ -191,10 +196,7 @@ body {
     color: var(--green-success);
 }
 
-/* =========================
-   GRID
-========================= */
-
+/* grid principal: columna izquierda mas amplia para chart/contendido principal */
 .grid-layout {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -206,14 +208,11 @@ body {
     background-color: var(--bg-card);
     border-radius: 20px;
     padding: 25px;
-    position: relative;
+    position: relative; /* necesario para elementos absolute dentro de la card */
     border: 1px solid #1a2238;
 }
 
-/* =========================
-   RECOMMENDED CARD
-========================= */
-
+/* tarjeta recomendada: fondo degradado y overflow oculto para contener ilustraciones */
 .recommended-card {
     background: linear-gradient(135deg, #0a235c 0%, #050a18 100%);
     overflow: hidden;
@@ -241,15 +240,39 @@ body {
     max-width: 70%;
 }
 
+/* boton principal: sombra + transform en hover para efecto de elevacion
+   (si tocas padding/radius, revisa que el icono i no se desborde en botones compactos) */
 .btn-cta {
-    background: var(--accent-yellow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f9c15c 0%, #f6ad55 100%);
+    color: #101010;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
     border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-weight: bold;
     cursor: pointer;
 }
 
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.04);
+}
+
+.btn-cta i {
+    margin-left: 8px;
+}
+
+/* mascota/ilustracion dentro de la card: posicion absolute para superponer
+   cuidado con los offsets (right/bottom). si se mueven sin revisar, tapa
+   texto o baja la legibilidad en pantallas chicas */
 .mascot-book {
     position: absolute;
     right: 20px;
@@ -257,10 +280,8 @@ body {
     opacity: 0.8;
 }
 
-/* =========================
-   CHART
-========================= */
-
+/* area del grafico (mock): usamos clip-path para forma personalizada
+    nota: clip-path es sensible a cambios de height; no cambiar sin revisar */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -308,10 +329,7 @@ body {
     font-size: 0.8rem;
 }
 
-/* =========================
-   LISTS
-========================= */
-
+/* listas de actividad/desafios: items con separador inferior */
 .activity-item,
 .challenge-item {
     display: flex;
@@ -359,6 +377,7 @@ body {
     margin-right: 20px;
 }
 
+/* barra de progreso: el ancho de .progress suele manejarse via inline style o js */
 .progress-bar {
     width: 100%;
     height: 8px;
@@ -373,10 +392,7 @@ body {
     border-radius: 10px;
 }
 
-/* =========================
-   FLOATING BUTTON
-========================= */
-
+/* boton flotante de ia: fijo en esquina, agregar z-index si queda detras */
 .ai-button {
     position: fixed;
     right: 30px;
@@ -397,3 +413,4 @@ body {
     text-decoration: none;
     font-size: 0.85rem;
 }
+

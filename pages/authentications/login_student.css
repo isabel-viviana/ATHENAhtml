@@ -1,3 +1,7 @@
+/* reset basico de esta vista:
+   - evita margenes/paddings por defecto
+   - asegura box-sizing consistente
+   - fija fuente para que el panel izquierdo y el formulario se vean iguales */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +9,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* layout: centramos toda la pantalla (sin depender de medidas del html) */
 body {
     background-color: #050a18;
     height: 100vh;
@@ -13,13 +18,16 @@ body {
     justify-content: center;
 }
 
+/* contenedor split 50/50 aprox (izquierda decorativa, derecha formulario) */
 .main-container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-/* --- Panel Izquierdo --- */
+/* panel izquierdo: identidad visual (gradiente + mascota)
+   comentario de dev: este panel se usa como “marca” visual; en mobile se oculta para priorizar el form
+   (ver media query al final). */
 .left-panel {
     flex: 1;
     background: radial-gradient(circle at center, #1a3a8a 0%, #050a18 80%);
@@ -59,6 +67,7 @@ body {
 }
 
 .mascot {
+    /* la mascara usa object-fit via el html; max-width evita que crezca de mas */
     max-width: 300px;
 }
 

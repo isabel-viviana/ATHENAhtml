@@ -267,7 +267,9 @@ body {
    PROGRESS
 ========================================== */
 .progress {
+    /* barra del avance del simulacro (1px de altura real lo define el hijo .progress__fill) */
     width: 100%;
+
 
     height: 4px;
 

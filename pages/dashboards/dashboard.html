@@ -16,7 +16,13 @@
 
     <body>
         <div class="layout">
-            <!-- SIDEBAR -->
+            <!-- layout base del dashboard:
+                - aside.sidebar: menu principal (nav)
+                - main.main-content: area de contenido con scroll (body usa overflow: hidden)
+                notas:
+                - mantener body sin scroll evita dobles barras; el scroll real vive en main-content
+                - si agregas modales o dropdowns, validar z-index vs. .ai-button fijo
+            -->
             <aside class="sidebar">
                 <div class="sidebar__logo">
                     <i class="fas fa-brain"></i>
@@ -68,13 +74,19 @@
                         <span>Notificaciones</span>
                         <span class="sidebar__badge">3</span>
                     </a>
+                    <!-- nota: los items pueden tener badge o separador, estado activo indica la pagina actual -->
                 </nav>
             </aside>
 
-            <!-- CONTENIDO PRINCIPAL -->
+            <!-- contenido principal:
+                - header: saludo + cards compactas de metrica
+                - grid-layout: cards grandes (recomendado / progreso / actividad / desafios) -->
             <main class="main-content">
-                <!-- Cabecera -->
+                <!-- header: saludo + resumen rapido de metrica (racha/puntaje) -->
                 <header class="header">
+                    <!-- header de dashboard:
+                         - bloque user-welcome: saludo y progreso hacia el objetivo
+                         - stats-overview: cards compactas (racha / puntaje) para lectura rapida -->
                     <div class="user-welcome">
                         <h1>¡Hola, Estudiante! 👋</h1>
 
@@ -85,6 +97,7 @@
                         </p>
                     </div>
 
+                    <!-- stats-overview: tarjetas compactas con metricas clave (racha / puntaje) -->
                     <div class="stats-overview">
                         <div class="stat-card">
                             <i class="fas fa-fire icon-fire"></i>
@@ -112,9 +125,10 @@
                     </div>
                 </header>
 
-                <!-- Grid -->
+                <!-- grid-layout: 2 columnas (recomendado/progreso a la izquierda, listas a la derecha) -->
                 <div class="grid-layout">
-                    <!-- Recomendado -->
+                    <!-- recomendado: card de cta principal (idealmente primero en el flujo)
+                         incluye tag, copy, link y la ilustracion posicionada absoluto -->
                     <section class="card recommended-card">
                         <span class="tag">
                             <i class="fas fa-bolt"></i>
@@ -135,6 +149,7 @@
                         </a>
 
                         <div class="mascot-book">
+                            <!-- ilustracion: placeholder, posicion absoluto dentro de la card -->
                             <img
                                 src="https://via.placeholder.com/150"
                                 alt="Libro 3D"
@@ -142,7 +157,8 @@
                         </div>
                     </section>
 
-                    <!-- Gráfico -->
+                    <!-- grafico: mock del progreso semanal
+                         (placeholder visual para cuando conectemos un chart real) -->
                     <section class="card chart-card">
                         <div class="card-header">
                             <h3>Progreso Semanal</h3>
@@ -166,6 +182,8 @@
                             </div>
                         </div>
 
+                        <!-- chart-footer: cambia el texto por datos reales
+                             (ej: +X vs semana anterior). ojo con los signos (+/-) -->
                         <p class="chart-footer">
                             <i class="fas fa-chart-line"></i>
                             <span class="green">+35 puntos</span>
@@ -173,7 +191,9 @@
                         </p>
                     </section>
 
-                    <!-- Actividad -->
+                    <!-- actividad reciente:
+                         - cada .activity-item es un “acceso” (lleva a detalle o accion)
+                         - el chevron final indica que clickea -->
                     <section class="card list-card">
                         <div class="card-header">
                             <h3>
@@ -187,6 +207,7 @@
                             </button>
                         </div>
 
+                        <!-- activity-list: items ordenados por fecha, cada item es clicable -->
                         <div class="activity-list">
                             <div class="activity-item">
                                 <div class="item-icon green-bg">
@@ -203,6 +224,7 @@
                                     <p>Acierto</p>
                                 </div>
 
+                                <!-- icono flecha: indica que este item tiene destino / accion -->
                                 <i class="fas fa-chevron-right arrow"></i>
                             </div>
 
@@ -223,7 +245,8 @@
                         </div>
                     </section>
 
-                    <!-- Desafíos -->
+                    <!-- desafios: objetivos semanales con barra de progreso
+                         (nota: el % se controla con style width en .progress) -->
                     <section class="card list-card">
                         <div class="card-header">
                             <h3>
@@ -237,6 +260,7 @@
                             </button>
                         </div>
 
+                        <!-- challenge-list: cada elemento muestra progreso y porcentaje (width inline) -->
                         <div class="challenge-list">
                             <div class="challenge-item">
                                 <div class="challenge-info">
@@ -245,6 +269,8 @@
                                 </div>
 
                                 <div class="progress-bar">
+                                    <!-- progress: el ancho se controla via style (width) o js
+                                         mantenerlo en % para que el look de barra sea consistente -->
                                     <div
                                         class="progress"
                                         style="width: 66%"
@@ -274,7 +300,10 @@
                 </div>
             </main>
 
-            <!-- Botón IA -->
+            <!-- boton flotante ia:
+                - position: fixed (vive fuera del flujo)
+                - importante si luego agregas overlays/modales:
+                  este componente podria quedar detras sin z-index -->
             <div class="ai-button">
                 <img src="https://via.placeholder.com/50" alt="IA" />
             </div>

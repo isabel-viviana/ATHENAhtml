@@ -19,7 +19,8 @@ body {
     height: 100vh;
 }
 
-/* --- Panel Izquierdo --- */
+/* panel izquierdo: branding + mascot visual (sirve de lado estetico)
+   nota dev: esta columna es decoracion/identidad; se oculta en mobile para que el registro quede al foco */
 .left-panel {
     flex: 1;
     background: radial-gradient(circle at center, #1a3a8a 0%, #050a18 80%);
@@ -84,7 +85,9 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* Inputs y Botones */
+/* inputs y botones
+   nota: estos estilos estan pensados para el “flujo” del formulario (campos arriba, botones abajo)
+   sin depender de estilos globales. */
 .input-field {
     width: 100%;
     padding: 15px;

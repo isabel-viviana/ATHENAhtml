@@ -14,8 +14,10 @@
         />
     </head>
     <body>
-        <div class="main-container">
-            <!-- Panel Izquierdo -->
+            <div class="main-container">
+            <!-- layout split:
+                 - left-panel: branding + mascota (se oculta en mobile)
+                 - right-panel: formulario y acciones -->
             <div class="left-panel">
                 <div class="logo-top">
                     <img
@@ -27,7 +29,7 @@
                 </div>
                 <p class="subtitle">Vamos paso por paso.</p>
                 <div class="mascot-container">
-                    <!-- Aquí iría la imagen del zorro con lentes -->
+                    <!-- bloque decorativo del zorro: no aporta a la funcionalidad, solo refuerza la identidad visual -->
                     <img
                         src="../../images/Zorrito_13D.png"
                         alt="Mascota Athena con gafas"
@@ -36,24 +38,26 @@
                 </div>
             </div>
 
-            <!-- Panel Derecho -->
-            <div class="right-panel">
+            <!-- panel derecho: contenido funcional del login (formulario + social + enlaces inferiores) -->
+            <div class="right-panel"> <!-- panel derecho (formulario + acciones sociales + enlaces inferiores) -->
                 <div class="form-container">
                     <h2>Ingresa a tu cuenta de estudiante ATHENA</h2>
                     <p class="description">
                         Ingresa tu correo o número para continuar.
                     </p>
 
-                    <form>
+                    <form id="loginForm"> <!-- submit solo redirige (prototipo, sin backend) -->
                         <input
                             type="text"
                             placeholder="Correo electrónico"
                             class="input-field"
+                            required
                         />
                         <input
                             type="password"
                             placeholder="Contraseña"
                             class="input-field password-input"
+                            required
                         />
                         <button type="submit" class="btn-primary">
                             Iniciar sesión
@@ -92,5 +96,13 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // redirigir al dashboard (mantener esto asi: evita recarga del formulario)
+                window.location.href = '../dashboards/dashboard.html';
+            });
+        </script>
     </body>
 </html>
